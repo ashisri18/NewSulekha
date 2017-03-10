@@ -1,0 +1,1 @@
+function getChartDataForMe(){return([{"date":"01_08_16_09_38_38_127","Passed":35,"Failed":8,"Skipped":34,"displayname":"01Aug16-09:38"}]);}

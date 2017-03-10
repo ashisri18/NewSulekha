@@ -1,0 +1,1065 @@
+<html>
+<head>
+<title>TestNG:  Login</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Login</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>20/3/10</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jun 17 13:16:28 IST 2016</td>
+</tr>
+<tr><td>Total time:</td><td>2488 seconds (2488812 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.test.scripts.Login.tearDown()'><b>tearDown</b><br>Test class: com.test.scripts.Login</td>
+<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;Prasannas-MacBook-Pro.local&apos;, ip: &apos;10.10.4.140&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 5, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef, deviceName=iPhone 5, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef}]
+Session ID: 1c8d8bdc-e0bc-400a-b3c2-d0f29f6e7b80
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:43)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:216)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:526)
+	at com.test.baselib.BaseLib.tearDown(BaseLib.java:62)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;Prasannas-MacBook-Pro.local&apos;, ip: &apos;10.10.4.140&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:76)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 29 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:64)
+	... 30 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 43 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace391506011", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace391506011'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;Prasannas-MacBook-Pro.local&apos;, ip: &apos;10.10.4.140&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 5, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef, deviceName=iPhone 5, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef}]
+Session ID: 1c8d8bdc-e0bc-400a-b3c2-d0f29f6e7b80
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:43)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:216)
+	at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:526)
+	at com.test.baselib.BaseLib.tearDown(BaseLib.java:62)
+	at sun.reflect.GeneratedMethodAccessor8.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:517)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:732)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;Prasannas-MacBook-Pro.local&apos;, ip: &apos;10.10.4.140&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: driver.version: RemoteWebDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:76)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 29 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:64)
+	... 30 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 43 more
+</pre></div></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.test.scripts.Login.setUp()'><b>setUp</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.setUp()'><b>setUp</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.setUp()'><b>setUp</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.setUp()'><b>setUp</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.setUp()'><b>setUp</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.setUp()'><b>setUp</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.setUp()'><b>setUp</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.setUp()'><b>setUp</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.setUp()'><b>setUp</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.setUp()'><b>setUp</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.tearDown()'><b>tearDown</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.tearDown()'><b>tearDown</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.tearDown()'><b>tearDown</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.tearDown()'><b>tearDown</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.tearDown()'><b>tearDown</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.tearDown()'><b>tearDown</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.tearDown()'><b>tearDown</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.tearDown()'><b>tearDown</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.tearDown()'><b>tearDown</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.tearDown()'><b>tearDown</b><br>Test class: com.test.scripts.Login</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.test.scripts.Login.testGoogleLogin()'><b>testGoogleLogin</b><br>Test class: com.test.scripts.Login<br>Test method: To login through google+<br/>
+<a href="#Output-1068945248" onClick='toggleBox("Output-1068945248", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1068945248" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1068945248">
+STEP235<br/>
+STEP236<br/>
+STEP237<br/>
+STEP238<br/>
+STEP239<br/>
+STEP240<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 22.46 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;Prasannas-MacBook-Pro.local&apos;, ip: &apos;10.10.4.140&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities [{unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 5, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef, deviceName=iPhone 5, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef}]
+Session ID: bc030d85-d879-44db-aa56-d129da502bfd
+*** Element info: {Using=id, value=Email}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:43)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:59)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElementById(IOSDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:51)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at com.test.scripts.Login.testGoogleLogin(Login.java:657)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1068945248", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1068945248'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 22.46 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;Prasannas-MacBook-Pro.local&apos;, ip: &apos;10.10.4.140&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities [{unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 5, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef, deviceName=iPhone 5, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef}]
+Session ID: bc030d85-d879-44db-aa56-d129da502bfd
+*** Element info: {Using=id, value=Email}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:43)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:59)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElementById(IOSDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:51)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at com.test.scripts.Login.testGoogleLogin(Login.java:657)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+</pre></div></td>
+<td>70</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testUnRegGoogleLogin()'><b>testUnRegGoogleLogin</b><br>Test class: com.test.scripts.Login<br>Test method: Check the Create Account page for unregistered user when logged in through Facebook or G+<br/>
+<a href="#Output-1601935322" onClick='toggleBox("Output-1601935322", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1601935322" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1601935322">
+STEP241<br/>
+STEP242<br/>
+STEP243<br/>
+STEP244<br/>
+STEP245<br/>
+STEP246<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 22.46 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;Prasannas-MacBook-Pro.local&apos;, ip: &apos;10.10.4.140&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities [{unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 5, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef, deviceName=iPhone 5, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef}]
+Session ID: 82004855-e0da-45d6-af60-1fd0c4cdbd46
+*** Element info: {Using=id, value=Email}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:43)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:59)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElementById(IOSDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:51)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at com.test.scripts.Login.testUnRegGoogleLogin(Login.java:729)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1601935322", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1601935322'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 22.46 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;Prasannas-MacBook-Pro.local&apos;, ip: &apos;10.10.4.140&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities [{unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 5, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef, deviceName=iPhone 5, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef}]
+Session ID: 82004855-e0da-45d6-af60-1fd0c4cdbd46
+*** Element info: {Using=id, value=Email}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:43)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:59)
+	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElementById(IOSDriver.java:1)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:51)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at com.test.scripts.Login.testUnRegGoogleLogin(Login.java:729)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+</pre></div></td>
+<td>69</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testValidMobAndName()'><b>testValidMobAndName</b><br>Test class: com.test.scripts.Login<br>Test method: Enter a valid mobile number and email id in create account page and tap on Create button<br/>
+<a href="#Output-1817789863" onClick='toggleBox("Output-1817789863", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1817789863" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1817789863">
+STEP247<br/>
+STEP248<br/>
+STEP249<br/>
+STEP250<br/>
+STEP251<br/>
+STEP252<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;Prasannas-MacBook-Pro.local&apos;, ip: &apos;10.10.4.140&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: driver.version: AppiumDriver
+Capabilities [{unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 5, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef, deviceName=iPhone 5, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef}]
+Session ID: 1c8d8bdc-e0bc-400a-b3c2-d0f29f6e7b80
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:43)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
+	at io.appium.java_client.AppiumDriver.performTouchAction(AppiumDriver.java:316)
+	at io.appium.java_client.MultiTouchAction.perform(MultiTouchAction.java:74)
+	at io.appium.java_client.AppiumDriver.tap(AppiumDriver.java:353)
+	at com.test.scripts.Login.testValidMobAndName(Login.java:777)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;Prasannas-MacBook-Pro.local&apos;, ip: &apos;10.10.4.140&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: driver.version: AppiumDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:76)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 31 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:64)
+	... 32 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 45 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1817789863", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1817789863'><pre>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;Prasannas-MacBook-Pro.local&apos;, ip: &apos;10.10.4.140&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: driver.version: AppiumDriver
+Capabilities [{unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 5, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef, deviceName=iPhone 5, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef}]
+Session ID: 1c8d8bdc-e0bc-400a-b3c2-d0f29f6e7b80
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:43)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
+	at io.appium.java_client.AppiumDriver.performTouchAction(AppiumDriver.java:316)
+	at io.appium.java_client.MultiTouchAction.perform(MultiTouchAction.java:74)
+	at io.appium.java_client.AppiumDriver.tap(AppiumDriver.java:353)
+	at com.test.scripts.Login.testValidMobAndName(Login.java:777)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+Caused by: org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;Prasannas-MacBook-Pro.local&apos;, ip: &apos;10.10.4.140&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_65&apos;
+Driver info: driver.version: AppiumDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:76)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 31 more
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:144)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:64)
+	... 32 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:204)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:141)
+	... 45 more
+</pre></div></td>
+<td>59</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.test.scripts.Login.testForgtPwd()'><b>testForgtPwd</b><br>Test class: com.test.scripts.Login<br>Test method: To tap over 'forgot password' link in Login page.<br/>
+<a href="#Output-1053632127" onClick='toggleBox("Output-1053632127", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1053632127" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1053632127">
+STEP215<br/>
+STEP216<br/>
+STEP217<br/>
+STEP218<br/>
+STEP219<br/>
+STEP220<br/>
+</div>
+</td>
+<td></td>
+<td>43</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testHidePwdLnk()'><b>testHidePwdLnk</b><br>Test class: com.test.scripts.Login<br>Test method: To tap over 'Hide' link of password field in login page<br/>
+<a href="#Output-990679445" onClick='toggleBox("Output-990679445", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-990679445" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-990679445">
+STEP185<br/>
+STEP186<br/>
+STEP187<br/>
+STEP188<br/>
+STEP189<br/>
+STEP190<br/>
+</div>
+</td>
+<td></td>
+<td>55</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testLoginInvalideEmail()'><b>testLoginInvalideEmail</b><br>Test class: com.test.scripts.Login<br>Test method: To tap over 'login' button by entering invalid emailid<br/>
+<a href="#Output-756936249" onClick='toggleBox("Output-756936249", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-756936249" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-756936249">
+STEP126<br/>
+STEP127<br/>
+STEP128<br/>
+STEP129<br/>
+STEP130<br/>
+STEP131<br/>
+</div>
+</td>
+<td></td>
+<td>50</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testLoginInvalideMobNum()'><b>testLoginInvalideMobNum</b><br>Test class: com.test.scripts.Login<br>Test method: To tap over 'login' button by entering invalid mobileno.<br/>
+<a href="#Output-1368862151" onClick='toggleBox("Output-1368862151", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1368862151" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1368862151">
+STEP120<br/>
+STEP121<br/>
+STEP122<br/>
+STEP123<br/>
+STEP124<br/>
+STEP125<br/>
+</div>
+</td>
+<td></td>
+<td>52</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testLoginUnRegEmail()'><b>testLoginUnRegEmail</b><br>Test class: com.test.scripts.Login<br>Test method: To tap over 'login' button by entering unregistered email id<br/>
+<a href="#Output-753631393" onClick='toggleBox("Output-753631393", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-753631393" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-753631393">
+STEP132<br/>
+STEP133<br/>
+STEP134<br/>
+STEP135<br/>
+STEP136<br/>
+STEP137<br/>
+</div>
+</td>
+<td></td>
+<td>53</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testLoginUnRegMob()'><b>testLoginUnRegMob</b><br>Test class: com.test.scripts.Login<br>Test method: To tap over 'login' button by entering unregistered mobile number<br/>
+<a href="#Output-1713568869" onClick='toggleBox("Output-1713568869", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1713568869" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1713568869">
+STEP138<br/>
+STEP139<br/>
+STEP140<br/>
+STEP141<br/>
+STEP142<br/>
+STEP143<br/>
+</div>
+</td>
+<td></td>
+<td>52</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testLoginWOEmailIDMobileNum()'><b>testLoginWOEmailIDMobileNum</b><br>Test class: com.test.scripts.Login<br>Test method: Tap over LOGIN button without entering any values in Email ID/Mobile number field and verify.<br/>
+<a href="#Output-1412322831" onClick='toggleBox("Output-1412322831", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1412322831" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1412322831">
+STEP114<br/>
+STEP115<br/>
+STEP116<br/>
+STEP117<br/>
+STEP118<br/>
+STEP119<br/>
+</div>
+</td>
+<td></td>
+<td>44</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testLoginWithEmailWithoutPwd()'><b>testLoginWithEmailWithoutPwd</b><br>Test class: com.test.scripts.Login<br>Test method: To tap over 'login' button by entering registered emailid and no password<br/>
+<a href="#Output-2007486296" onClick='toggleBox("Output-2007486296", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2007486296" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2007486296">
+STEP173<br/>
+STEP174<br/>
+STEP175<br/>
+STEP176<br/>
+STEP177<br/>
+</div>
+</td>
+<td></td>
+<td>56</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testLoginWithMobileWithoutPwd()'><b>testLoginWithMobileWithoutPwd</b><br>Test class: com.test.scripts.Login<br>Test method: To tap over 'login' button by entering registered mobileno and no password<br/>
+<a href="#Output-1800649922" onClick='toggleBox("Output-1800649922", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1800649922" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1800649922">
+STEP168<br/>
+STEP169<br/>
+STEP170<br/>
+STEP171<br/>
+STEP172<br/>
+</div>
+</td>
+<td></td>
+<td>52</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testPwdViaEmail()'><b>testPwdViaEmail</b><br>Test class: com.test.scripts.Login<br>Test method: To enter a valid Email ID in Via email in Forgot password? Page and tap on Send button<br/>
+<a href="#Output-2101527076" onClick='toggleBox("Output-2101527076", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2101527076" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2101527076">
+STEP228<br/>
+STEP229<br/>
+STEP230<br/>
+STEP231<br/>
+STEP232<br/>
+STEP233<br/>
+STEP234<br/>
+</div>
+</td>
+<td></td>
+<td>70</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testPwdViaSms()'><b>testPwdViaSms</b><br>Test class: com.test.scripts.Login<br>Test method: To enter a valid mobile number in Via SMS in Forgot password? Page and tap on Send button<br/>
+<a href="#Output-1424108509" onClick='toggleBox("Output-1424108509", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1424108509" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1424108509">
+STEP221<br/>
+STEP222<br/>
+STEP223<br/>
+STEP224<br/>
+STEP225<br/>
+STEP226<br/>
+STEP227<br/>
+</div>
+</td>
+<td></td>
+<td>66</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testShowPwdLnk()'><b>testShowPwdLnk</b><br>Test class: com.test.scripts.Login<br>Test method: To tap over 'Show' link of password field in login page<br/>
+<a href="#Output-1458091526" onClick='toggleBox("Output-1458091526", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1458091526" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1458091526">
+STEP178<br/>
+STEP179<br/>
+STEP180<br/>
+STEP181<br/>
+STEP182<br/>
+STEP183<br/>
+STEP184<br/>
+</div>
+</td>
+<td></td>
+<td>51</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testUnRegEmailJoinSulekha()'><b>testUnRegEmailJoinSulekha</b><br>Test class: com.test.scripts.Login<br>Test method: Tap over Join Sulekha button displayed on the alert for unregistered emailID.<br/>
+<a href="#Output-855700733" onClick='toggleBox("Output-855700733", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-855700733" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-855700733">
+STEP150<br/>
+STEP151<br/>
+STEP152<br/>
+STEP153<br/>
+STEP154<br/>
+STEP155<br/>
+</div>
+</td>
+<td></td>
+<td>60</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testUnRegMobJoinSulekha()'><b>testUnRegMobJoinSulekha</b><br>Test class: com.test.scripts.Login<br>Test method: Tap over Join Sulekha button displayed on the alert for unregistered mobile number.<br/>
+<a href="#Output-487792155" onClick='toggleBox("Output-487792155", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-487792155" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-487792155">
+STEP144<br/>
+STEP145<br/>
+STEP146<br/>
+STEP147<br/>
+STEP148<br/>
+STEP149<br/>
+</div>
+</td>
+<td></td>
+<td>55</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testUnRegMobileCancel()'><b>testUnRegMobileCancel</b><br>Test class: com.test.scripts.Login<br>Test method: Tap over Cancel button displayed on the alert for unregistered mobile number.<br/>
+<a href="#Output-1446001495" onClick='toggleBox("Output-1446001495", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1446001495" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1446001495">
+STEP156<br/>
+STEP157<br/>
+STEP158<br/>
+STEP159<br/>
+STEP160<br/>
+STEP161<br/>
+</div>
+</td>
+<td></td>
+<td>58</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testUnregisteredEmailPopupCancelBtn()'><b>testUnregisteredEmailPopupCancelBtn</b><br>Test class: com.test.scripts.Login<br>Test method: Tap over Cancel button displayed on the alert for unregistered EmailID.<br/>
+<a href="#Output-269892014" onClick='toggleBox("Output-269892014", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-269892014" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-269892014">
+STEP162<br/>
+STEP163<br/>
+STEP164<br/>
+STEP165<br/>
+STEP166<br/>
+STEP167<br/>
+</div>
+</td>
+<td></td>
+<td>58</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testValidEmailInvalidPwd()'><b>testValidEmailInvalidPwd</b><br>Test class: com.test.scripts.Login<br>Test method: To Tap over LOGIN and enter valid Email ID and invalid Password and verify.<br/>
+<a href="#Output-1291367132" onClick='toggleBox("Output-1291367132", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1291367132" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1291367132">
+STEP191<br/>
+STEP192<br/>
+STEP193<br/>
+STEP194<br/>
+STEP195<br/>
+STEP196<br/>
+</div>
+</td>
+<td></td>
+<td>64</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testValidLoginViaEmailID()'><b>testValidLoginViaEmailID</b><br>Test class: com.test.scripts.Login<br>Test method: To Tap over LOGIN and enter valid Email ID and valid Password and verify.<br/>
+<a href="#Output-1389774257" onClick='toggleBox("Output-1389774257", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1389774257" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1389774257">
+STEP203<br/>
+STEP204<br/>
+STEP205<br/>
+STEP206<br/>
+STEP207<br/>
+STEP208<br/>
+</div>
+</td>
+<td></td>
+<td>60</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testValidLoginViaValidMobileNum()'><b>testValidLoginViaValidMobileNum</b><br>Test class: com.test.scripts.Login<br>Test method: To Tap over LOGIN and enter valid Mobile number and valid Password and verify.<br/>
+<a href="#Output-1700721442" onClick='toggleBox("Output-1700721442", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1700721442" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1700721442">
+STEP209<br/>
+STEP210<br/>
+STEP211<br/>
+STEP212<br/>
+STEP213<br/>
+STEP214<br/>
+</div>
+</td>
+<td></td>
+<td>64</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testValidMobileInvalidPwd()'><b>testValidMobileInvalidPwd</b><br>Test class: com.test.scripts.Login<br>Test method: To Tap over LOGIN and enter valid Mobile number and invalid Password and verify.<br/>
+<a href="#Output-3565780" onClick='toggleBox("Output-3565780", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-3565780" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-3565780">
+STEP197<br/>
+STEP198<br/>
+STEP199<br/>
+STEP200<br/>
+STEP201<br/>
+STEP202<br/>
+</div>
+</td>
+<td></td>
+<td>63</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.test.scripts.Login.test6DigitVerificationCode()'><b>test6DigitVerificationCode</b><br>Test class: com.test.scripts.Login<br>Test method: Check entering less than 6-digit verification code</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testInvalidEnteringEmail()'><b>testInvalidEnteringEmail</b><br>Test class: com.test.scripts.Login<br>Test method: Enter invalid Email ID and tap over Create button.</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testInvalidMobileNumber()'><b>testInvalidMobileNumber</b><br>Test class: com.test.scripts.Login<br>Test method: Enter invalid Mobile number and tap over Create button.</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testInvalidOtp()'><b>testInvalidOtp</b><br>Test class: com.test.scripts.Login<br>Test method: Check entering invalid OTP</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testSkipLnk()'><b>testSkipLnk</b><br>Test class: com.test.scripts.Login<br>Test method: Tap over SKIP link and verify.</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testTandCApplyLnk()'><b>testTandCApplyLnk</b><br>Test class: com.test.scripts.Login<br>Test method: Tap over T&C apply link and verify.-- Bug T&C link is disabled.</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testValidOtp()'><b>testValidOtp</b><br>Test class: com.test.scripts.Login<br>Test method: Enter valid OTP</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testWOEnteringEmail()'><b>testWOEnteringEmail</b><br>Test class: com.test.scripts.Login<br>Test method: Tap over Create button without entering Email ID</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testWithoutEnteringMobileNumber()'><b>testWithoutEnteringMobileNumber</b><br>Test class: com.test.scripts.Login<br>Test method: Tap over Create button without entering Mobile number</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+<tr>
+<td title='com.test.scripts.Login.testWithoutName()'><b>testWithoutName</b><br>Test class: com.test.scripts.Login<br>Test method: Tap over Create button without entering Name.</td>
+<td></td>
+<td>0</td>
+<td>com.test.scripts.Login@4d41cee</td></tr>
+</table><p>
+</body>
+</html>

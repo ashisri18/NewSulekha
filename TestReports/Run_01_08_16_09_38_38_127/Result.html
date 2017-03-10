@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+		<title>Suite Report</title>
+
+			<link rel="stylesheet" type="text/css" href="../Resources/Css/design.css" />
+			<script type="text/javascript" src="../Resources/Js/jquery.min.js"></script>
+			<!--[if lt IE 9]>
+			<script language="javascript" type="text/javascript" src="../Resources/Js/excanvas.js"></script>
+			<![endif]-->
+
+			<script language="javascript" type="text/javascript" src="../Resources/Js/amcharts.js"></script>
+			<script type="text/javascript" src="../Resources/Js/pie.js">
+</script>
+	
+		<script language="javascript" type="text/javascript">	
+			$(document).ready(function() { $(".video").hide();	
+				$("#showmenu").show(); 	
+				$('#showmenu').click(function(){ 	
+					$('.video').toggle("slide"); 	
+				}); 	
+			});	
+		</script>	
+		<style>	
+				#showmenu{text-align:center; padding-top:20px;color: #585858; font-size: 14px;}	
+				#video{height: 550px;margin-top: 5px;width: 97%;border-style: solid;border-width: 1px;border-color: #21ABCD;/* Shadow for boxes */ -moz-box-shadow: 0 0 10px #CCCCCC; -ms-box-shadow: 0 0 10px #CCCCCC; -webkit-box-shadow: 0 0 10px #CCCCCC; box-shadow: 0 0 10px #CCCCCC; zoom: 1; filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=2, Direction=0), progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=2, Direction=90), progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=2, Direction=180), progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=2, Direction=270); background-color: white;}	
+		</style>	
+		<script language="javascript" type="text/javascript">
+	
+			$(document).ready(function(){
+	
+				$('#tcFilter').on('change',function(){	
+					if($(this).val()=='pass'){	
+						$('.pass').show();	
+						$('.fail').hide();	
+						$('.skip').hide();	
+						$('.config').hide();	
+					}	
+					if($(this).val()=='fail'){	
+						$('.pass').hide();	
+						$('.fail').show();	
+						$('.skip').hide();	
+						$('.config').hide();	
+					}	
+					if($(this).val()=='skip'){	
+						$('.pass').hide();	
+						$('.fail').hide();	
+						$('.skip').show();	
+						$('.config').hide();	
+					}	
+					if($(this).val()=='tests'){ 	
+						$('.pass').show(); 	
+						$('.fail').show();	
+						$('.skip').show(); 	
+						$('.config').hide(); 	
+					}	
+					if($(this).val()=='config'){	
+						$('.pass').hide();	
+						$('.fail').hide();	
+						$('.skip').hide();	
+						$('.config').show();	
+					}	
+					if($(this).val()=='all'){	
+						$('.pass').show();	
+						$('.fail').show();	
+						$('.skip').show();	
+						$('.config').show();	
+					}	
+				});	
+			});	
+		</script> 
+ <script>  
+ var chart;  
+ var legend;  
+  
+ var chartData = [  
+ {  
+ 'status': 'Passed',  
+ 'value': 35, 'color':'#0F9D28'  
+ },  
+ {  
+ 'status': 'Failed',  
+ 'value': 8, 'color':'#DF0C12'  
+ },  
+ {  
+ 'status': 'Skipped',  
+ 'value': 34, 'color':'#F3F24D'  
+ }  
+ ];  
+  
+ AmCharts.ready(function () {  
+ // PIE CHART  
+ chart = new AmCharts.AmPieChart();  
+ chart.dataProvider = chartData;  
+ chart.titleField = 'status';  
+ chart.valueField = 'value';  
+ chart.outlineColor = '#FFFFFF';  
+ chart.outlineAlpha = 0.8;  
+ chart.outlineThickness = 2;  
+ chart.colorField = 'color';  
+ chart.balloonText = '[[title]]<br><span style="font-size:14px"><b>[[status]]</b> ([[value]])</span>'; 
+ // this makes the chart 3D  
+ chart.depth3D = 15;  
+ chart.angle = 30;  
+  
+ // WRITE  
+ chart.write('chart');  
+ });  
+ </script> 		</head>		<body>			<table id="mainTable">				<tr id="header" >					<td id="logo"><img src="../Resources/Img/NXGlogo.png" alt="Logo" height="70" width="140" /> <br/></td>
+ 	 <td id="headertext">
+Sulekha Automation Test Report						<div style="padding-right:20px;float:right"><img src="Image/Sulekha.png" height="70" width="140" /> </i></div>					</td>
+				</tr>
+<tr id="container">
+		<td id="menu">
+<ul>	<li class="menuStyle"><a href="../index.html" >Index</a></li>
+
+
+ </ul>
+ </td>
+
+
+<td id="content">
+		<div class="info">
+			The following pie chart demonstrates the percentage of Passed, Failed and Skipped Test Cases<br/>
+			Time Taken for Executing below Test Cases: <b>7359 Sec</b> <br/>
+		</div>
+		<div class="info"><br/>			<b>Test script execution of WelcomePage, JoinSulekha, LoginToSulekha, SDLDWithoutType, SDLDwithType, UpdateAccount, BrowseBusinessListing, Home, More, MDLD, Need Posting, My Needs Dashboard, Buisness Profile </b>			<br/><br/>		</div>		<div>
+
+		<div class="chartStyle summary" style="width: 32%;background-color: #3B9C9C;">
+			<b>Summary</b><br/><br/>
+			<table>
+				<tr>
+					<td>Execution Date</td>
+					<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+					<td>01-Aug-2016 11:41:17</td>
+				</tr>
+				<tr>
+					<td>Total Test Cases</td>
+					<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+					<td>77</td>
+				</tr>
+				<tr>
+					<td>Passed</td>
+					<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+					<td>35</td>
+				</tr>
+				<tr>
+					<td>Failed</td>
+					<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+					<td>8</td>
+				</tr>
+				<tr>
+					<td>Skipped</td>
+					<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+					<td>34</td>
+				</tr>
+			</table> 
+		</div>		<div class="chartStyle" style="text-align: left;margin-left: 30px;float: left;width: 60%;">
+			<div id="chart" style="height:300px;color:black;"></div>
+		</div>
+	</div>
+ <div>
+
+<div style="float:left; color: #585858; font-size: 14px;">
+		<select id="tcFilter" class="filter">
+			<option class="filterOption" value="all">All Methods</option>
+			<option class="filterOption" value="tests">Test Methods</option>
+			<option class="filterOption" value="pass">Passed Test Cases</option>
+			<option class="filterOption" value="fail">Failed Test Cases</option>
+			<option class="filterOption" value="skip">Skipped Test Cases</option>
+			<option class="filterOption" value="config">Configuration Methods</option>
+		</select>Filter The Methods Based on Selection</div>
+<table id="tableStyle" class="chartStyle" style="height:50px; float: left">
+		<tr>			<th>SLNo.</th>
+			<th> Page </th>
+			<th>Test Name</th>
+			<th>Test Description</th>
+<th>Approach</th>			<th>Time</th>
+			<th style="width: 7%">Status</th>
+		</tr>
+
+<tr class="all pass">
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/LocationAlertAndSkipBtn_Iteration1/LocationAlertAndSkipBtn.html">1</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/LocationAlertAndSkipBtn_Iteration1/LocationAlertAndSkipBtn.html">WelcomePage</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/LocationAlertAndSkipBtn_Iteration1/LocationAlertAndSkipBtn.html">LocationAlertAndSkipBtn</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/LocationAlertAndSkipBtn_Iteration1/LocationAlertAndSkipBtn.html">To check location permission alert ,Allow location and tap on skip button in onboarding screen.</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/LocationAlertAndSkipBtn_Iteration1/LocationAlertAndSkipBtn.html">Automation</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/LocationAlertAndSkipBtn_Iteration1/LocationAlertAndSkipBtn.html">43 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/DontAllowLocation_Iteration1/DontAllowLocation.html">2</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/DontAllowLocation_Iteration1/DontAllowLocation.html">WelcomePage</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/DontAllowLocation_Iteration1/DontAllowLocation.html">DontAllowLocation</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/DontAllowLocation_Iteration1/DontAllowLocation.html">Tap over 'Don't Allow' on location permission alert and verify</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/DontAllowLocation_Iteration1/DontAllowLocation.html">Automation</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/DontAllowLocation_Iteration1/DontAllowLocation.html">25 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/NotificationPermissionAlert_Iteration1/NotificationPermissionAlert.html">3</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/NotificationPermissionAlert_Iteration1/NotificationPermissionAlert.html">WelcomePage</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/NotificationPermissionAlert_Iteration1/NotificationPermissionAlert.html">NotificationPermissionAlert</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/NotificationPermissionAlert_Iteration1/NotificationPermissionAlert.html">To check notification permission alert and tap on its OK button.</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/NotificationPermissionAlert_Iteration1/NotificationPermissionAlert.html">Automation</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/NotificationPermissionAlert_Iteration1/NotificationPermissionAlert.html">108 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/DontAllowNotification_Iteration1/DontAllowNotification.html">4</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/DontAllowNotification_Iteration1/DontAllowNotification.html">WelcomePage</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/DontAllowNotification_Iteration1/DontAllowNotification.html">DontAllowNotification</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/DontAllowNotification_Iteration1/DontAllowNotification.html"> Tap over 'Don't Allow' on Push notification permission alert</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/DontAllowNotification_Iteration1/DontAllowNotification.html">Automation</a></td>
+		<td><a href="Suite/WelcomePage/com/test/scripts/WelcomePage/DontAllowNotification_Iteration1/DontAllowNotification.html">89 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/InvalidValidMobileNum_Iteration1/InvalidValidMobileNum.html">5</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/InvalidValidMobileNum_Iteration1/InvalidValidMobileNum.html">JoinSulekha</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/InvalidValidMobileNum_Iteration1/InvalidValidMobileNum.html">InvalidValidMobileNum</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/InvalidValidMobileNum_Iteration1/InvalidValidMobileNum.html">To tap join now button without mobile number, invalid mobile number and with valid mobile number.</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/InvalidValidMobileNum_Iteration1/InvalidValidMobileNum.html">Automation</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/InvalidValidMobileNum_Iteration1/InvalidValidMobileNum.html">56 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all fail">
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/OTPTimeAndResendCode_Iteration1/OTPTimeAndResendCode.html">6</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/OTPTimeAndResendCode_Iteration1/OTPTimeAndResendCode.html">JoinSulekha</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/OTPTimeAndResendCode_Iteration1/OTPTimeAndResendCode.html">OTPTimeAndResendCode</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/OTPTimeAndResendCode_Iteration1/OTPTimeAndResendCode.html">To check otp time limit, resend code button, received otp through sms</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/OTPTimeAndResendCode_Iteration1/OTPTimeAndResendCode.html">Automation</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/OTPTimeAndResendCode_Iteration1/OTPTimeAndResendCode.html">280 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/fail.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/InvalidValidOtp_Iteration1/InvalidValidOtp.html">7</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/InvalidValidOtp_Iteration1/InvalidValidOtp.html">JoinSulekha</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/InvalidValidOtp_Iteration1/InvalidValidOtp.html">InvalidValidOtp</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/InvalidValidOtp_Iteration1/InvalidValidOtp.html">To tap Done button without otp, with invalid otp,with less than 6 digit otp, and tap edit icon and enter received otp</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/InvalidValidOtp_Iteration1/InvalidValidOtp.html">Automation</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/InvalidValidOtp_Iteration1/InvalidValidOtp.html">132 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/TermsAndCondition_Iteration1/TermsAndCondition.html">8</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/TermsAndCondition_Iteration1/TermsAndCondition.html">JoinSulekha</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/TermsAndCondition_Iteration1/TermsAndCondition.html">TermsAndCondition</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/TermsAndCondition_Iteration1/TermsAndCondition.html">To tap T and C link in join sulekha page and navigating back from t and c page.</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/TermsAndCondition_Iteration1/TermsAndCondition.html">Automation</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/TermsAndCondition_Iteration1/TermsAndCondition.html">34 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/SkipLnk_Iteration1/SkipLnk.html">9</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/SkipLnk_Iteration1/SkipLnk.html">JoinSulekha</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/SkipLnk_Iteration1/SkipLnk.html">SkipLnk</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/SkipLnk_Iteration1/SkipLnk.html"> To tap over 'skip' link in join sulekha page and verify if home page is displayed</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/SkipLnk_Iteration1/SkipLnk.html">Automation</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/SkipLnk_Iteration1/SkipLnk.html">22 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/LoginLnk_Iteration1/LoginLnk.html">10</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/LoginLnk_Iteration1/LoginLnk.html">JoinSulekha</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/LoginLnk_Iteration1/LoginLnk.html">LoginLnk</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/LoginLnk_Iteration1/LoginLnk.html">To tap over 'login' link in the join sulekha page and verify if 'login page is displayed</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/LoginLnk_Iteration1/LoginLnk.html">Automation</a></td>
+		<td><a href="Suite/JoinSulekha/com/test/scripts/JoinSulekha/LoginLnk_Iteration1/LoginLnk.html">20 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all fail">
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/InvalidLogin_Iteration1/InvalidLogin.html">11</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/InvalidLogin_Iteration1/InvalidLogin.html">LoginToSulekha</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/InvalidLogin_Iteration1/InvalidLogin.html">InvalidLogin</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/InvalidLogin_Iteration1/InvalidLogin.html">To tap over login button without entering login credentials, with invalid credentials, unregistered credentials,without password and invalid password, to tap over show and hide link and forgot password link,To receive password via sms and email.</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/InvalidLogin_Iteration1/InvalidLogin.html">Automation</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/InvalidLogin_Iteration1/InvalidLogin.html">227 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/fail.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegMobJoinSulekha_Iteration1/UnRegMobJoinSulekha.html">12</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegMobJoinSulekha_Iteration1/UnRegMobJoinSulekha.html">LoginToSulekha</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegMobJoinSulekha_Iteration1/UnRegMobJoinSulekha.html">UnRegMobJoinSulekha</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegMobJoinSulekha_Iteration1/UnRegMobJoinSulekha.html">Tap over Join Sulekha button displayed on the alert for unregistered mobile number.</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegMobJoinSulekha_Iteration1/UnRegMobJoinSulekha.html">Automation</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegMobJoinSulekha_Iteration1/UnRegMobJoinSulekha.html">36 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegEmailJoinSulekha_Iteration1/UnRegEmailJoinSulekha.html">13</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegEmailJoinSulekha_Iteration1/UnRegEmailJoinSulekha.html">LoginToSulekha</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegEmailJoinSulekha_Iteration1/UnRegEmailJoinSulekha.html">UnRegEmailJoinSulekha</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegEmailJoinSulekha_Iteration1/UnRegEmailJoinSulekha.html">Tap over Join Sulekha button displayed on the alert for unregistered emailID.</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegEmailJoinSulekha_Iteration1/UnRegEmailJoinSulekha.html">Automation</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegEmailJoinSulekha_Iteration1/UnRegEmailJoinSulekha.html">35 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidLoginViaEmailID_Iteration1/ValidLoginViaEmailID.html">14</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidLoginViaEmailID_Iteration1/ValidLoginViaEmailID.html">LoginToSulekha</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidLoginViaEmailID_Iteration1/ValidLoginViaEmailID.html">ValidLoginViaEmailID</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidLoginViaEmailID_Iteration1/ValidLoginViaEmailID.html">To Tap over LOGIN and enter valid Email ID and valid Password and verify.</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidLoginViaEmailID_Iteration1/ValidLoginViaEmailID.html">Automation</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidLoginViaEmailID_Iteration1/ValidLoginViaEmailID.html">36 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidLoginViaMobileNum_Iteration1/ValidLoginViaMobileNum.html">15</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidLoginViaMobileNum_Iteration1/ValidLoginViaMobileNum.html">LoginToSulekha</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidLoginViaMobileNum_Iteration1/ValidLoginViaMobileNum.html">ValidLoginViaMobileNum</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidLoginViaMobileNum_Iteration1/ValidLoginViaMobileNum.html">To Tap over LOGIN and enter valid Mobile number and valid Password and verify.</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidLoginViaMobileNum_Iteration1/ValidLoginViaMobileNum.html">Automation</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidLoginViaMobileNum_Iteration1/ValidLoginViaMobileNum.html">42 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/GoogleLogin_Iteration1/GoogleLogin.html">16</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/GoogleLogin_Iteration1/GoogleLogin.html">LoginToSulekha</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/GoogleLogin_Iteration1/GoogleLogin.html">GoogleLogin</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/GoogleLogin_Iteration1/GoogleLogin.html">To login through google+</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/GoogleLogin_Iteration1/GoogleLogin.html">Automation</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/GoogleLogin_Iteration1/GoogleLogin.html">126 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegGoogleLogin_Iteration1/UnRegGoogleLogin.html">17</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegGoogleLogin_Iteration1/UnRegGoogleLogin.html">LoginToSulekha</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegGoogleLogin_Iteration1/UnRegGoogleLogin.html">UnRegGoogleLogin</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegGoogleLogin_Iteration1/UnRegGoogleLogin.html">To check google+ create account page and enter valid mobile/email id and create   account.</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegGoogleLogin_Iteration1/UnRegGoogleLogin.html">Automation</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/UnRegGoogleLogin_Iteration1/UnRegGoogleLogin.html">85 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/HandleAlertPopup_Iteration1/HandleAlertPopup.html">18</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/HandleAlertPopup_Iteration1/HandleAlertPopup.html">LoginToSulekha</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/HandleAlertPopup_Iteration1/HandleAlertPopup.html">HandleAlertPopup</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/HandleAlertPopup_Iteration1/HandleAlertPopup.html">Tap create button without and with invalid mobile number and without email id and name.</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/HandleAlertPopup_Iteration1/HandleAlertPopup.html">Automation</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/HandleAlertPopup_Iteration1/HandleAlertPopup.html">130 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/GoogleInvalidOtp_Iteration1/GoogleInvalidOtp.html">19</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/GoogleInvalidOtp_Iteration1/GoogleInvalidOtp.html">LoginToSulekha</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/GoogleInvalidOtp_Iteration1/GoogleInvalidOtp.html">GoogleInvalidOtp</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/GoogleInvalidOtp_Iteration1/GoogleInvalidOtp.html">Check entering invalid OTP</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/GoogleInvalidOtp_Iteration1/GoogleInvalidOtp.html">Automation</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/GoogleInvalidOtp_Iteration1/GoogleInvalidOtp.html">116 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all fail">
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/SixDigitVerificationCode_Iteration1/SixDigitVerificationCode.html">20</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/SixDigitVerificationCode_Iteration1/SixDigitVerificationCode.html">LoginToSulekha</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/SixDigitVerificationCode_Iteration1/SixDigitVerificationCode.html">SixDigitVerificationCode</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/SixDigitVerificationCode_Iteration1/SixDigitVerificationCode.html">Check entering less than 6-digit verification code</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/SixDigitVerificationCode_Iteration1/SixDigitVerificationCode.html">Automation</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/SixDigitVerificationCode_Iteration1/SixDigitVerificationCode.html">111 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/fail.png"></td>
+	</tr>
+<tr class="all fail">
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidOtp_Iteration1/ValidOtp.html">21</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidOtp_Iteration1/ValidOtp.html">LoginToSulekha</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidOtp_Iteration1/ValidOtp.html">ValidOtp</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidOtp_Iteration1/ValidOtp.html">Enter valid OTP</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidOtp_Iteration1/ValidOtp.html">Automation</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/ValidOtp_Iteration1/ValidOtp.html">149 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/fail.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/TandCApplyLnk_Iteration1/TandCApplyLnk.html">22</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/TandCApplyLnk_Iteration1/TandCApplyLnk.html">LoginToSulekha</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/TandCApplyLnk_Iteration1/TandCApplyLnk.html">TandCApplyLnk</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/TandCApplyLnk_Iteration1/TandCApplyLnk.html">To tap T and C link and Skip link in login page.</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/TandCApplyLnk_Iteration1/TandCApplyLnk.html">Automation</a></td>
+		<td><a href="Suite/LoginToSulekha/com/test/scripts/LoginToSulekha/TandCApplyLnk_Iteration1/TandCApplyLnk.html">55 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/TellUsMore_Iteration1/TellUsMore.html">23</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/TellUsMore_Iteration1/TellUsMore.html">SDLDWithoutType</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/TellUsMore_Iteration1/TellUsMore.html">TellUsMore</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/TellUsMore_Iteration1/TellUsMore.html">To check tell us more label and navigate to confirm and submit page without any value entered in tell us more field .</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/TellUsMore_Iteration1/TellUsMore.html">Automation</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/TellUsMore_Iteration1/TellUsMore.html">72 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/TellusMoreFldWithValue_Iteration1/TellusMoreFldWithValue.html">24</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/TellusMoreFldWithValue_Iteration1/TellusMoreFldWithValue.html">SDLDWithoutType</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/TellusMoreFldWithValue_Iteration1/TellusMoreFldWithValue.html">TellusMoreFldWithValue</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/TellusMoreFldWithValue_Iteration1/TellusMoreFldWithValue.html">To check confirm and submit page when value is provided in tell us more field ,and edit  and update additional info.</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/TellusMoreFldWithValue_Iteration1/TellusMoreFldWithValue.html">Automation</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/TellusMoreFldWithValue_Iteration1/TellusMoreFldWithValue.html">125 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/SubmitWithNeedNameAttribute_Iteration1/SubmitWithNeedNameAttribute.html">25</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/SubmitWithNeedNameAttribute_Iteration1/SubmitWithNeedNameAttribute.html">SDLDWithoutType</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/SubmitWithNeedNameAttribute_Iteration1/SubmitWithNeedNameAttribute.html">SubmitWithNeedNameAttribute</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/SubmitWithNeedNameAttribute_Iteration1/SubmitWithNeedNameAttribute.html">To Tap over SUBMIT button in Confirm and submit page when need name is passed as attribute value.</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/SubmitWithNeedNameAttribute_Iteration1/SubmitWithNeedNameAttribute.html">Automation</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/SubmitWithNeedNameAttribute_Iteration1/SubmitWithNeedNameAttribute.html">90 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/SubmitWithAdditionalInfoAttribute_Iteration1/SubmitWithAdditionalInfoAttribute.html">26</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/SubmitWithAdditionalInfoAttribute_Iteration1/SubmitWithAdditionalInfoAttribute.html">SDLDWithoutType</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/SubmitWithAdditionalInfoAttribute_Iteration1/SubmitWithAdditionalInfoAttribute.html">SubmitWithAdditionalInfoAttribute</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/SubmitWithAdditionalInfoAttribute_Iteration1/SubmitWithAdditionalInfoAttribute.html">Tap over SUBMIT button in Confirm and submit page when Additional info is passed as attribute value.</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/SubmitWithAdditionalInfoAttribute_Iteration1/SubmitWithAdditionalInfoAttribute.html">Automation</a></td>
+		<td><a href="Suite/SDLDWithoutType/com/test/scripts/SDLDWithoutType/SubmitWithAdditionalInfoAttribute_Iteration1/SubmitWithAdditionalInfoAttribute.html">93 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/SDLDwithType/com/test/scripts/SDLDwithType/SDLDNeedWithType_Iteration1/SDLDNeedWithType.html">27</a></td>
+		<td><a href="Suite/SDLDwithType/com/test/scripts/SDLDwithType/SDLDNeedWithType_Iteration1/SDLDNeedWithType.html">SDLDwithType</a></td>
+		<td><a href="Suite/SDLDwithType/com/test/scripts/SDLDwithType/SDLDNeedWithType_Iteration1/SDLDNeedWithType.html">SDLDNeedWithType</a></td>
+		<td><a href="Suite/SDLDwithType/com/test/scripts/SDLDwithType/SDLDNeedWithType_Iteration1/SDLDNeedWithType.html">Search for SDLD need with type and check if question with select options is displayed, tap on next in contact info page, edit attribute in confirm and submit page,update attribute and tap next and submit the need.</a></td>
+		<td><a href="Suite/SDLDwithType/com/test/scripts/SDLDwithType/SDLDNeedWithType_Iteration1/SDLDNeedWithType.html">Automation</a></td>
+		<td><a href="Suite/SDLDwithType/com/test/scripts/SDLDwithType/SDLDNeedWithType_Iteration1/SDLDNeedWithType.html">127 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all fail">
+		<td><a href="Suite/SDLDwithType/com/test/scripts/SDLDwithType/OptionAlert_Iteration1/OptionAlert.html">28</a></td>
+		<td><a href="Suite/SDLDwithType/com/test/scripts/SDLDwithType/OptionAlert_Iteration1/OptionAlert.html">SDLDwithType</a></td>
+		<td><a href="Suite/SDLDwithType/com/test/scripts/SDLDwithType/OptionAlert_Iteration1/OptionAlert.html">OptionAlert</a></td>
+		<td><a href="Suite/SDLDwithType/com/test/scripts/SDLDwithType/OptionAlert_Iteration1/OptionAlert.html">Tap on next button without choosing any option.</a></td>
+		<td><a href="Suite/SDLDwithType/com/test/scripts/SDLDwithType/OptionAlert_Iteration1/OptionAlert.html">Automation</a></td>
+		<td><a href="Suite/SDLDwithType/com/test/scripts/SDLDwithType/OptionAlert_Iteration1/OptionAlert.html">42 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/fail.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/UpdateMyAccountPageChangePassword_Iteration1/UpdateMyAccountPageChangePassword.html">29</a></td>
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/UpdateMyAccountPageChangePassword_Iteration1/UpdateMyAccountPageChangePassword.html">UpdateAccount</a></td>
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/UpdateMyAccountPageChangePassword_Iteration1/UpdateMyAccountPageChangePassword.html">UpdateMyAccountPageChangePassword</a></td>
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/UpdateMyAccountPageChangePassword_Iteration1/UpdateMyAccountPageChangePassword.html">Check the Update my account page and change the password and verify logout button in more page</a></td>
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/UpdateMyAccountPageChangePassword_Iteration1/UpdateMyAccountPageChangePassword.html">Automation</a></td>
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/UpdateMyAccountPageChangePassword_Iteration1/UpdateMyAccountPageChangePassword.html">178 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/ChangeMobNum_Iteration1/ChangeMobNum.html">30</a></td>
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/ChangeMobNum_Iteration1/ChangeMobNum.html">UpdateAccount</a></td>
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/ChangeMobNum_Iteration1/ChangeMobNum.html">ChangeMobNum</a></td>
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/ChangeMobNum_Iteration1/ChangeMobNum.html"> Change the mobile number and tap on Save profile button</a></td>
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/ChangeMobNum_Iteration1/ChangeMobNum.html">Automation</a></td>
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/ChangeMobNum_Iteration1/ChangeMobNum.html">110 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/ChangeUsername_Iteration1/ChangeUsername.html">31</a></td>
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/ChangeUsername_Iteration1/ChangeUsername.html">UpdateAccount</a></td>
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/ChangeUsername_Iteration1/ChangeUsername.html">ChangeUsername</a></td>
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/ChangeUsername_Iteration1/ChangeUsername.html">Change the name and tap on Save profile button</a></td>
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/ChangeUsername_Iteration1/ChangeUsername.html">Automation</a></td>
+		<td><a href="Suite/UpdateAccount/com/test/scripts/UpdateAccount/ChangeUsername_Iteration1/ChangeUsername.html">62 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/businessProfilePage_Iteration1/businessProfilePage.html">32</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/businessProfilePage_Iteration1/businessProfilePage.html">BrowseBusinessListing</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/businessProfilePage_Iteration1/businessProfilePage.html">businessProfilePage</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/businessProfilePage_Iteration1/businessProfilePage.html">Select any item in Browse business listing and verify.</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/businessProfilePage_Iteration1/businessProfilePage.html">Automation</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/businessProfilePage_Iteration1/businessProfilePage.html">67 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/fillLink_Iteration1/fillLink.html">33</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/fillLink_Iteration1/fillLink.html">BrowseBusinessListing</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/fillLink_Iteration1/fillLink.html">fillLink</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/fillLink_Iteration1/fillLink.html">Tap over 'Tap to fill' link and verify whether user is redirected to need form.</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/fillLink_Iteration1/fillLink.html">Automation</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/fillLink_Iteration1/fillLink.html">77 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all fail">
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/browseBusinessListingPage_Iteration1/browseBusinessListingPage.html">34</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/browseBusinessListingPage_Iteration1/browseBusinessListingPage.html">BrowseBusinessListing</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/browseBusinessListingPage_Iteration1/browseBusinessListingPage.html">browseBusinessListingPage</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/browseBusinessListingPage_Iteration1/browseBusinessListingPage.html">To tap over call , sms and shortlist icons and verify.</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/browseBusinessListingPage_Iteration1/browseBusinessListingPage.html">Automation</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/browseBusinessListingPage_Iteration1/browseBusinessListingPage.html">131 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/fail.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/floatSortBtn_Iteration1/floatSortBtn.html">35</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/floatSortBtn_Iteration1/floatSortBtn.html">BrowseBusinessListing</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/floatSortBtn_Iteration1/floatSortBtn.html">floatSortBtn</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/floatSortBtn_Iteration1/floatSortBtn.html">Tap on the Sort button displayed in business listing page and tap on “sort by score”, “sort by rating” and “sort by default” options.</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/floatSortBtn_Iteration1/floatSortBtn.html">Automation</a></td>
+		<td><a href="Suite/BrowseBusinessListing/com/test/scripts/BrowseBusinessListing/floatSortBtn_Iteration1/floatSortBtn.html">183 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/Home/com/test/scripts/Home/CityAndPopularCategories_Iteration1/CityAndPopularCategories.html">36</a></td>
+		<td><a href="Suite/Home/com/test/scripts/Home/CityAndPopularCategories_Iteration1/CityAndPopularCategories.html">Home</a></td>
+		<td><a href="Suite/Home/com/test/scripts/Home/CityAndPopularCategories_Iteration1/CityAndPopularCategories.html">CityAndPopularCategories</a></td>
+		<td><a href="Suite/Home/com/test/scripts/Home/CityAndPopularCategories_Iteration1/CityAndPopularCategories.html">To check if city and popular categories are displayed in home page.</a></td>
+		<td><a href="Suite/Home/com/test/scripts/Home/CityAndPopularCategories_Iteration1/CityAndPopularCategories.html">Automation</a></td>
+		<td><a href="Suite/Home/com/test/scripts/Home/CityAndPopularCategories_Iteration1/CityAndPopularCategories.html">533 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/Home/com/test/scripts/Home/SearchResult_Iteration1/SearchResult.html">37</a></td>
+		<td><a href="Suite/Home/com/test/scripts/Home/SearchResult_Iteration1/SearchResult.html">Home</a></td>
+		<td><a href="Suite/Home/com/test/scripts/Home/SearchResult_Iteration1/SearchResult.html">SearchResult</a></td>
+		<td><a href="Suite/Home/com/test/scripts/Home/SearchResult_Iteration1/SearchResult.html">Search for Need names/Keywords</a></td>
+		<td><a href="Suite/Home/com/test/scripts/Home/SearchResult_Iteration1/SearchResult.html">Automation</a></td>
+		<td><a href="Suite/Home/com/test/scripts/Home/SearchResult_Iteration1/SearchResult.html">20 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/More/com/test/scripts/More/MoreScreenAndShortlist_Iteration1/MoreScreenAndShortlist.html">38</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/MoreScreenAndShortlist_Iteration1/MoreScreenAndShortlist.html">More</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/MoreScreenAndShortlist_Iteration1/MoreScreenAndShortlist.html">MoreScreenAndShortlist</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/MoreScreenAndShortlist_Iteration1/MoreScreenAndShortlist.html">Tap on More in Home page and tap on shortlist link.</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/MoreScreenAndShortlist_Iteration1/MoreScreenAndShortlist.html">Automation</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/MoreScreenAndShortlist_Iteration1/MoreScreenAndShortlist.html">44 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/More/com/test/scripts/More/ListMyBuisnessPage_Iteration1/ListMyBuisnessPage.html">39</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/ListMyBuisnessPage_Iteration1/ListMyBuisnessPage.html">More</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/ListMyBuisnessPage_Iteration1/ListMyBuisnessPage.html">ListMyBuisnessPage</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/ListMyBuisnessPage_Iteration1/ListMyBuisnessPage.html">Check tapping on 'List my business'</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/ListMyBuisnessPage_Iteration1/ListMyBuisnessPage.html">Automation</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/ListMyBuisnessPage_Iteration1/ListMyBuisnessPage.html">18 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/More/com/test/scripts/More/NotificationPage_Iteration1/NotificationPage.html">40</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/NotificationPage_Iteration1/NotificationPage.html">More</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/NotificationPage_Iteration1/NotificationPage.html">NotificationPage</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/NotificationPage_Iteration1/NotificationPage.html">View notification and tap on any of it.</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/NotificationPage_Iteration1/NotificationPage.html">Automation</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/NotificationPage_Iteration1/NotificationPage.html">37 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all fail">
+		<td><a href="Suite/More/com/test/scripts/More/RemoveMyShortlist_Iteration1/RemoveMyShortlist.html">41</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/RemoveMyShortlist_Iteration1/RemoveMyShortlist.html">More</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/RemoveMyShortlist_Iteration1/RemoveMyShortlist.html">RemoveMyShortlist</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/RemoveMyShortlist_Iteration1/RemoveMyShortlist.html">Remove shortlist and verify.</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/RemoveMyShortlist_Iteration1/RemoveMyShortlist.html">Automation</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/RemoveMyShortlist_Iteration1/RemoveMyShortlist.html">41 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/fail.png"></td>
+	</tr>
+<tr class="all fail">
+		<td><a href="Suite/More/com/test/scripts/More/PostedReview_Iteration1/PostedReview.html">42</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/PostedReview_Iteration1/PostedReview.html">More</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/PostedReview_Iteration1/PostedReview.html">PostedReview</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/PostedReview_Iteration1/PostedReview.html">Check whether review posted by the user is displayed in Reviews page.</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/PostedReview_Iteration1/PostedReview.html">Automation</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/PostedReview_Iteration1/PostedReview.html">108 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/fail.png"></td>
+	</tr>
+<tr class="all pass">
+		<td><a href="Suite/More/com/test/scripts/More/AnyReview_Iteration1/AnyReview.html">43</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/AnyReview_Iteration1/AnyReview.html">More</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/AnyReview_Iteration1/AnyReview.html">AnyReview</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/AnyReview_Iteration1/AnyReview.html">Tap on any review displayed in My reviews page</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/AnyReview_Iteration1/AnyReview.html">Automation</a></td>
+		<td><a href="Suite/More/com/test/scripts/More/AnyReview_Iteration1/AnyReview.html">16 Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/pass.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/MDLDNeed_Iteration2/MDLDNeed.html">44</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/MDLDNeed_Iteration2/MDLDNeed.html">MDLD</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/MDLDNeed_Iteration2/MDLDNeed.html">MDLDNeed</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/MDLDNeed_Iteration2/MDLDNeed.html">Search for a MDLD need with type(Ex: Business intelligence & analytics training), and post a need.</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/MDLDNeed_Iteration2/MDLDNeed.html">Automation</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/MDLDNeed_Iteration2/MDLDNeed.html">23 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/FormPage_Iteration2/FormPage.html">45</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/FormPage_Iteration2/FormPage.html">MDLD</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/FormPage_Iteration2/FormPage.html">FormPage</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/FormPage_Iteration2/FormPage.html">Check if user is shown question with select options and check without choosing any option , check for choose locality question, navigate to confirm and submit page and edit and update the attribute group questionnaire.</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/FormPage_Iteration2/FormPage.html">Automation</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/FormPage_Iteration2/FormPage.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/NextWOChangeValueSubmitBtn_Iteration2/NextWOChangeValueSubmitBtn.html">46</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/NextWOChangeValueSubmitBtn_Iteration2/NextWOChangeValueSubmitBtn.html">MDLD</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/NextWOChangeValueSubmitBtn_Iteration2/NextWOChangeValueSubmitBtn.html">NextWOChangeValueSubmitBtn</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/NextWOChangeValueSubmitBtn_Iteration2/NextWOChangeValueSubmitBtn.html">Tap over NEXT button without changing any values and submit the need.</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/NextWOChangeValueSubmitBtn_Iteration2/NextWOChangeValueSubmitBtn.html">Automation</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/NextWOChangeValueSubmitBtn_Iteration2/NextWOChangeValueSubmitBtn.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/OthersOption_Iteration2/OthersOption.html">47</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/OthersOption_Iteration2/OthersOption.html">MDLD</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/OthersOption_Iteration2/OthersOption.html">OthersOption</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/OthersOption_Iteration2/OthersOption.html">Select 'Others' as an Option in the question list</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/OthersOption_Iteration2/OthersOption.html">Automation</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/OthersOption_Iteration2/OthersOption.html">3 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/TellusMoreWithValue_Iteration2/TellusMoreWithValue.html">48</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/TellusMoreWithValue_Iteration2/TellusMoreWithValue.html">MDLD</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/TellusMoreWithValue_Iteration2/TellusMoreWithValue.html">TellusMoreWithValue</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/TellusMoreWithValue_Iteration2/TellusMoreWithValue.html">Fill the LCF and POST a need for any SDLD need(Camera Dealears,User enters the text)</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/TellusMoreWithValue_Iteration2/TellusMoreWithValue.html">Automation</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/TellusMoreWithValue_Iteration2/TellusMoreWithValue.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/TellUsMoreWOValue_Iteration2/TellUsMoreWOValue.html">49</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/TellUsMoreWOValue_Iteration2/TellUsMoreWOValue.html">MDLD</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/TellUsMoreWOValue_Iteration2/TellUsMoreWOValue.html">TellUsMoreWOValue</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/TellUsMoreWOValue_Iteration2/TellUsMoreWOValue.html">Fill the LCF and POST a need for any SDLD need(Camera Dealears,User without enters the text)</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/TellUsMoreWOValue_Iteration2/TellUsMoreWOValue.html">Automation</a></td>
+		<td><a href="Suite/MDLD/com/test/scripts/MDLD/TellUsMoreWOValue_Iteration2/TellUsMoreWOValue.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/SearchBoxPopularCategory_Iteration2/SearchBoxPopularCategory.html">50</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/SearchBoxPopularCategory_Iteration2/SearchBoxPopularCategory.html">NeedPosting</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/SearchBoxPopularCategory_Iteration2/SearchBoxPopularCategory.html">SearchBoxPopularCategory</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/SearchBoxPopularCategory_Iteration2/SearchBoxPopularCategory.html">Search for a need in home page and tap on any of the popular categories and verify.</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/SearchBoxPopularCategory_Iteration2/SearchBoxPopularCategory.html">Automation</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/SearchBoxPopularCategory_Iteration2/SearchBoxPopularCategory.html">21 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NeedFormList_Iteration2/NeedFormList.html">51</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NeedFormList_Iteration2/NeedFormList.html">NeedPosting</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NeedFormList_Iteration2/NeedFormList.html">NeedFormList</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NeedFormList_Iteration2/NeedFormList.html">Select a need from the list and tap on 'Fill the form and get free quotes' button</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NeedFormList_Iteration2/NeedFormList.html">Automation</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NeedFormList_Iteration2/NeedFormList.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NeedFormLstWOOption_Iteration2/NeedFormLstWOOption.html">52</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NeedFormLstWOOption_Iteration2/NeedFormLstWOOption.html">NeedPosting</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NeedFormLstWOOption_Iteration2/NeedFormLstWOOption.html">NeedFormLstWOOption</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NeedFormLstWOOption_Iteration2/NeedFormLstWOOption.html">Tap on 'Fill the form and get free quotes' button without choosing any option from the list</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NeedFormLstWOOption_Iteration2/NeedFormLstWOOption.html">Automation</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NeedFormLstWOOption_Iteration2/NeedFormLstWOOption.html">2 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/BrowseBussinesslink_Iteration2/BrowseBussinesslink.html">53</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/BrowseBussinesslink_Iteration2/BrowseBussinesslink.html">NeedPosting</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/BrowseBussinesslink_Iteration2/BrowseBussinesslink.html">BrowseBussinesslink</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/BrowseBussinesslink_Iteration2/BrowseBussinesslink.html">Select any need from the list and tap on 'Browse bussinees listing' link</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/BrowseBussinesslink_Iteration2/BrowseBussinesslink.html">Automation</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/BrowseBussinesslink_Iteration2/BrowseBussinesslink.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/BusinessLstWOOption_Iteration2/BusinessLstWOOption.html">54</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/BusinessLstWOOption_Iteration2/BusinessLstWOOption.html">NeedPosting</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/BusinessLstWOOption_Iteration2/BusinessLstWOOption.html">BusinessLstWOOption</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/BusinessLstWOOption_Iteration2/BusinessLstWOOption.html">Tap on 'Browse business listing' link without choosing any option from the list</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/BusinessLstWOOption_Iteration2/BusinessLstWOOption.html">Automation</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/BusinessLstWOOption_Iteration2/BusinessLstWOOption.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NextWOChoosing_Iteration2/NextWOChoosing.html">55</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NextWOChoosing_Iteration2/NextWOChoosing.html">NeedPosting</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NextWOChoosing_Iteration2/NextWOChoosing.html">NextWOChoosing</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NextWOChoosing_Iteration2/NextWOChoosing.html">In the need form Tap on the NEXT button without choosing any options</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NextWOChoosing_Iteration2/NextWOChoosing.html">Automation</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/NextWOChoosing_Iteration2/NextWOChoosing.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/OthersOptionNextBtnwithoutvalue_Iteration2/OthersOptionNextBtnwithoutvalue.html">56</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/OthersOptionNextBtnwithoutvalue_Iteration2/OthersOptionNextBtnwithoutvalue.html">NeedPosting</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/OthersOptionNextBtnwithoutvalue_Iteration2/OthersOptionNextBtnwithoutvalue.html">OthersOptionNextBtnwithoutvalue</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/OthersOptionNextBtnwithoutvalue_Iteration2/OthersOptionNextBtnwithoutvalue.html">In need form choose 'Others' as an option and tap on next and tap next without entering any thing in tell us more field.</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/OthersOptionNextBtnwithoutvalue_Iteration2/OthersOptionNextBtnwithoutvalue.html">Automation</a></td>
+		<td><a href="Suite/NeedPosting/com/test/scripts/NeedPosting/OthersOptionNextBtnwithoutvalue_Iteration2/OthersOptionNextBtnwithoutvalue.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/CheckStatusNotificationTriggered_Iteration2/CheckStatusNotificationTriggered.html">57</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/CheckStatusNotificationTriggered_Iteration2/CheckStatusNotificationTriggered.html">MyNeedsDashboard</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/CheckStatusNotificationTriggered_Iteration2/CheckStatusNotificationTriggered.html">CheckStatusNotificationTriggered</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/CheckStatusNotificationTriggered_Iteration2/CheckStatusNotificationTriggered.html">Check the Status 'It's taking time to get matching business for your need' in Dashboard and check if notification is triggere</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/CheckStatusNotificationTriggered_Iteration2/CheckStatusNotificationTriggered.html">Automation</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/CheckStatusNotificationTriggered_Iteration2/CheckStatusNotificationTriggered.html">3 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/AutomaticRefeshDatePostDashboardpage_Iteration2/AutomaticRefeshDatePostDashboardpage.html">58</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/AutomaticRefeshDatePostDashboardpage_Iteration2/AutomaticRefeshDatePostDashboardpage.html">MyNeedsDashboard</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/AutomaticRefeshDatePostDashboardpage_Iteration2/AutomaticRefeshDatePostDashboardpage.html">AutomaticRefeshDatePostDashboardpage</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/AutomaticRefeshDatePostDashboardpage_Iteration2/AutomaticRefeshDatePostDashboardpage.html">Check for automatic refresh and date of posted need and tap on any need in dashboard.</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/AutomaticRefeshDatePostDashboardpage_Iteration2/AutomaticRefeshDatePostDashboardpage.html">Automation</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/AutomaticRefeshDatePostDashboardpage_Iteration2/AutomaticRefeshDatePostDashboardpage.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/ResponsesPage_Iteration2/ResponsesPage.html">59</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/ResponsesPage_Iteration2/ResponsesPage.html">MyNeedsDashboard</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/ResponsesPage_Iteration2/ResponsesPage.html">ResponsesPage</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/ResponsesPage_Iteration2/ResponsesPage.html">Check the Responses page and tap on call icon and score and 'Select & review' button displayed and check summary tab. Tap No/yes button displayed on 'Got your job done from business name..?' alert</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/ResponsesPage_Iteration2/ResponsesPage.html">Automation</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/ResponsesPage_Iteration2/ResponsesPage.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/WriteReviewLinkPostReview_Iteration2/WriteReviewLinkPostReview.html">60</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/WriteReviewLinkPostReview_Iteration2/WriteReviewLinkPostReview.html">MyNeedsDashboard</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/WriteReviewLinkPostReview_Iteration2/WriteReviewLinkPostReview.html">WriteReviewLinkPostReview</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/WriteReviewLinkPostReview_Iteration2/WriteReviewLinkPostReview.html">Check whether Write review link is displayed when user discard to review the business and check posting the review in rate and review page.</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/WriteReviewLinkPostReview_Iteration2/WriteReviewLinkPostReview.html">Automation</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/WriteReviewLinkPostReview_Iteration2/WriteReviewLinkPostReview.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/NotFinalized_Iteration2/NotFinalized.html">61</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/NotFinalized_Iteration2/NotFinalized.html">MyNeedsDashboard</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/NotFinalized_Iteration2/NotFinalized.html">NotFinalized</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/NotFinalized_Iteration2/NotFinalized.html">Tap over 'NOT FINALIZED' button and Select 'I didn't received calls from businesses' and verify.</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/NotFinalized_Iteration2/NotFinalized.html">Automation</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/NotFinalized_Iteration2/NotFinalized.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/DismissPopup_Iteration2/DismissPopup.html">62</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/DismissPopup_Iteration2/DismissPopup.html">MyNeedsDashboard</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/DismissPopup_Iteration2/DismissPopup.html">DismissPopup</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/DismissPopup_Iteration2/DismissPopup.html">Tap on 'Dismiss' button displayed on the pop up</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/DismissPopup_Iteration2/DismissPopup.html">Automation</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/DismissPopup_Iteration2/DismissPopup.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/SelectNotHappyQuoteComments_Iteration2/SelectNotHappyQuoteComments.html">63</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/SelectNotHappyQuoteComments_Iteration2/SelectNotHappyQuoteComments.html">MyNeedsDashboard</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/SelectNotHappyQuoteComments_Iteration2/SelectNotHappyQuoteComments.html">SelectNotHappyQuoteComments</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/SelectNotHappyQuoteComments_Iteration2/SelectNotHappyQuoteComments.html">Select 'I'm not happy with the quote I received' and verify- More quotes and Enter the comments in more quotes pop up and tap Send.</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/SelectNotHappyQuoteComments_Iteration2/SelectNotHappyQuoteComments.html">Automation</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/SelectNotHappyQuoteComments_Iteration2/SelectNotHappyQuoteComments.html">4 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/CancelPopupVerifyCancelledShortlist_Iteration2/CancelPopupVerifyCancelledShortlist.html">64</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/CancelPopupVerifyCancelledShortlist_Iteration2/CancelPopupVerifyCancelledShortlist.html">MyNeedsDashboard</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/CancelPopupVerifyCancelledShortlist_Iteration2/CancelPopupVerifyCancelledShortlist.html">CancelPopupVerifyCancelledShortlist</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/CancelPopupVerifyCancelledShortlist_Iteration2/CancelPopupVerifyCancelledShortlist.html">Tap on 'Cancel' button displayed on the pop up and select 'I don't have this need anymore'. Shortlist the business and verify in My shortlists section</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/CancelPopupVerifyCancelledShortlist_Iteration2/CancelPopupVerifyCancelledShortlist.html">Automation</a></td>
+		<td><a href="Suite/MyNeedsDashboard/com/test/scripts/MyNeedsDashboard/CancelPopupVerifyCancelledShortlist_Iteration2/CancelPopupVerifyCancelledShortlist.html">2 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/BusinessProfilePageAndPostReview_Iteration2/BusinessProfilePageAndPostReview.html">65</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/BusinessProfilePageAndPostReview_Iteration2/BusinessProfilePageAndPostReview.html">BusinessProfile</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/BusinessProfilePageAndPostReview_Iteration2/BusinessProfilePageAndPostReview.html">BusinessProfilePageAndPostReview</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/BusinessProfilePageAndPostReview_Iteration2/BusinessProfilePageAndPostReview.html">Check the Business Profile page and tap over “more reviews link” , “write review  icon” and post a review without rating/reviewing and only  by rating.</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/BusinessProfilePageAndPostReview_Iteration2/BusinessProfilePageAndPostReview.html">Automation</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/BusinessProfilePageAndPostReview_Iteration2/BusinessProfilePageAndPostReview.html">2 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/CallIcon_Iteration2/CallIcon.html">66</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/CallIcon_Iteration2/CallIcon.html">BusinessProfile</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/CallIcon_Iteration2/CallIcon.html">CallIcon</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/CallIcon_Iteration2/CallIcon.html">To tap on call icon in the business profile page.</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/CallIcon_Iteration2/CallIcon.html">Automation</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/CallIcon_Iteration2/CallIcon.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/SMSTap_Iteration2/SMSTap.html">67</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/SMSTap_Iteration2/SMSTap.html">BusinessProfile</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/SMSTap_Iteration2/SMSTap.html">SMSTap</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/SMSTap_Iteration2/SMSTap.html">To tap on SMS icon and verify if message popup is displayed.</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/SMSTap_Iteration2/SMSTap.html">Automation</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/SMSTap_Iteration2/SMSTap.html">2 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/ShortlistTap_Iteration2/ShortlistTap.html">68</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/ShortlistTap_Iteration2/ShortlistTap.html">BusinessProfile</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/ShortlistTap_Iteration2/ShortlistTap.html">ShortlistTap</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/ShortlistTap_Iteration2/ShortlistTap.html">To tap on Shortlist icon and verify.</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/ShortlistTap_Iteration2/ShortlistTap.html">Automation</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/ShortlistTap_Iteration2/ShortlistTap.html">0 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/RemoveShortlistTap_Iteration2/RemoveShortlistTap.html">69</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/RemoveShortlistTap_Iteration2/RemoveShortlistTap.html">BusinessProfile</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/RemoveShortlistTap_Iteration2/RemoveShortlistTap.html">RemoveShortlistTap</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/RemoveShortlistTap_Iteration2/RemoveShortlistTap.html">To tap on Remove Shortlist icon and verify.</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/RemoveShortlistTap_Iteration2/RemoveShortlistTap.html">Automation</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/RemoveShortlistTap_Iteration2/RemoveShortlistTap.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/NotificationIcon_Iteration2/NotificationIcon.html">70</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/NotificationIcon_Iteration2/NotificationIcon.html">BusinessProfile</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/NotificationIcon_Iteration2/NotificationIcon.html">NotificationIcon</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/NotificationIcon_Iteration2/NotificationIcon.html">To tap on Notification icon in the business profile page.</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/NotificationIcon_Iteration2/NotificationIcon.html">Automation</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/NotificationIcon_Iteration2/NotificationIcon.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/WorkPhoneNumber_Iteration2/WorkPhoneNumber.html">71</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/WorkPhoneNumber_Iteration2/WorkPhoneNumber.html">BusinessProfile</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/WorkPhoneNumber_Iteration2/WorkPhoneNumber.html">WorkPhoneNumber</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/WorkPhoneNumber_Iteration2/WorkPhoneNumber.html">Tap on the phone number displayed under Work section</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/WorkPhoneNumber_Iteration2/WorkPhoneNumber.html">Automation</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/WorkPhoneNumber_Iteration2/WorkPhoneNumber.html">13 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/AddressTap_Iteration2/AddressTap.html">72</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/AddressTap_Iteration2/AddressTap.html">BusinessProfile</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/AddressTap_Iteration2/AddressTap.html">AddressTap</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/AddressTap_Iteration2/AddressTap.html">To tap on the address icon associated with Address</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/AddressTap_Iteration2/AddressTap.html">Automation</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/AddressTap_Iteration2/AddressTap.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/EmailIcon_Iteration2/EmailIcon.html">73</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/EmailIcon_Iteration2/EmailIcon.html">BusinessProfile</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/EmailIcon_Iteration2/EmailIcon.html">EmailIcon</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/EmailIcon_Iteration2/EmailIcon.html">Tap on the Email id displayed under Email section</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/EmailIcon_Iteration2/EmailIcon.html">Automation</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/EmailIcon_Iteration2/EmailIcon.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/WebIcon_Iteration2/WebIcon.html">74</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/WebIcon_Iteration2/WebIcon.html">BusinessProfile</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/WebIcon_Iteration2/WebIcon.html">WebIcon</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/WebIcon_Iteration2/WebIcon.html">To tap on the web icon of the business in the business profile page.</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/WebIcon_Iteration2/WebIcon.html">Automation</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/WebIcon_Iteration2/WebIcon.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/BusinessWebsiteLnk_Iteration2/BusinessWebsiteLnk.html">75</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/BusinessWebsiteLnk_Iteration2/BusinessWebsiteLnk.html">BusinessProfile</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/BusinessWebsiteLnk_Iteration2/BusinessWebsiteLnk.html">BusinessWebsiteLnk</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/BusinessWebsiteLnk_Iteration2/BusinessWebsiteLnk.html">Tap on Website of the business</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/BusinessWebsiteLnk_Iteration2/BusinessWebsiteLnk.html">Automation</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/BusinessWebsiteLnk_Iteration2/BusinessWebsiteLnk.html">2 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/AnyReview_Iteration2/AnyReview.html">76</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/AnyReview_Iteration2/AnyReview.html">BusinessProfile</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/AnyReview_Iteration2/AnyReview.html">AnyReview</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/AnyReview_Iteration2/AnyReview.html"> To tap on any review</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/AnyReview_Iteration2/AnyReview.html">Automation</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/AnyReview_Iteration2/AnyReview.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+<tr class="all skip">
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/SubmitReview_Iteration2/SubmitReview.html">77</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/SubmitReview_Iteration2/SubmitReview.html">BusinessProfile</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/SubmitReview_Iteration2/SubmitReview.html">SubmitReview</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/SubmitReview_Iteration2/SubmitReview.html">Submit the review</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/SubmitReview_Iteration2/SubmitReview.html">Automation</a></td>
+		<td><a href="Suite/BusinessProfile/com/test/scripts/BusinessProfile/SubmitReview_Iteration2/SubmitReview.html">1 Milli Sec</a></td>
+		<td><img style="border: none; width: 25px" src="../Resources/Img/skip.png"></td>
+	</tr>
+ </table>
+ </div>
+ </td>
+ </tr>			<tr id="footer">
+							<td colspan="2">
+								Best Viewed in &nbsp;
+								<a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a> &nbsp;
+								<a href="http://www.apple.com/in/safari/">Safari</a>&nbsp;
+								<a href="http://www.google.com/chrome/">Chrome</a>&nbsp;
+								<a href="http://windows.microsoft.com/en-IN/internet-explorer/download-ie">IE 9 & Above</a>&nbsp;
+							&nbsp;
+							NXG Reporter Version: v1.0.0&nbsp;
+							Reports by: <a href="http://seleniumbyneeds.blogspot.in/">Selenium By Needs</a>
+					</td>
+ 				</tr>
+			</table>
+		</body>
+</html>

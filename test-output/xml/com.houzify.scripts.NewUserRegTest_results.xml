@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test"
+           tests="15"
+           failures="0"
+           errors="0"
+           skipped="15"
+           time="0.002">
+  <properties />
+  
+            <testcase name="tearDown" time="0.0" classname="com.houzify.scripts.NewUserRegTest">
+          <skipped />
+    </testcase>
+            <testcase name="tearDown" time="0.0" classname="com.houzify.scripts.NewUserRegTest">
+          <skipped />
+    </testcase>
+            <testcase name="tearDown" time="0.0" classname="com.houzify.scripts.NewUserRegTest">
+          <skipped />
+    </testcase>
+            <testcase name="setUp" time="0.0" classname="com.houzify.scripts.NewUserRegTest">
+          <skipped />
+    </testcase>
+            <testcase name="setUp" time="0.0" classname="com.houzify.scripts.NewUserRegTest">
+          <skipped />
+    </testcase>
+            <testcase name="tearDown" time="0.0" classname="com.houzify.scripts.NewUserRegTest">
+          <skipped />
+    </testcase>
+            <testcase name="tearDown" time="0.0" classname="com.houzify.scripts.NewUserRegTest">
+          <skipped />
+    </testcase>
+            <testcase name="setUp" time="0.0" classname="com.houzify.scripts.NewUserRegTest">
+          <skipped />
+    </testcase>
+            <testcase name="setUp" time="0.0" classname="com.houzify.scripts.NewUserRegTest">
+          <skipped />
+    </testcase>
+            <testcase name="setUp" time="0.0" classname="com.houzify.scripts.NewUserRegTest">
+          <skipped />
+    </testcase>
+            <testcase name="testFBLogin" time="0.0" classname="com.houzify.scripts.NewUserRegTest">
+          <skipped />
+    </testcase>
+            <testcase name="testGoogleLogin" time="0.0" classname="com.houzify.scripts.NewUserRegTest">
+          <skipped />
+    </testcase>
+            <testcase name="testSignUpwithGalleryImg" time="0.0" classname="com.houzify.scripts.NewUserRegTest">
+          <skipped />
+    </testcase>
+            <testcase name="testInvalidLogin" time="0.0" classname="com.houzify.scripts.NewUserRegTest">
+          <skipped />
+    </testcase>
+            <testcase name="testSignupWithCameraPic" time="0.0" classname="com.houzify.scripts.NewUserRegTest">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>

@@ -1,0 +1,805 @@
+<html>
+<head>
+<title>TestNG:  LoginToSulekha</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>LoginToSulekha</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>31/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jul 12 16:32:13 IST 2016</td>
+</tr>
+<tr><td>Total time:</td><td>3925 seconds (3925022 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.test6DigitVerificationCode()'><b>test6DigitVerificationCode</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Check entering less than 6-digit verification code<br/>
+<a href="#Output-61073295" onClick='toggleBox("Output-61073295", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-61073295" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-61073295">
+STEP208<br/>
+STEP209<br/>
+STEP210<br/>
+STEP211<br/>
+STEP212<br/>
+STEP213<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 11.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;RaghuKirans-MacBook-Pro.local&apos;, ip: &apos;10.10.5.169&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities [{unicodekeyboard=true, app=/Users/raghukiranmr/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, orientation=, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 5, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/raghukiranmr/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, orientation=, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef, deviceName=iPhone 5, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef}]
+Session ID: 53ba7192-19d1-454d-91da-7bd7df5bf2b6
+*** Element info: {Using=xpath, value=//UIAStaticText[@name=&apos;Enter 6-digit verification code&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:51)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:67)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:145)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElementByXPath(IOSDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:63)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at com.test.scripts.LoginToSulekha.test6DigitVerificationCode(LoginToSulekha.java:1133)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace61073295", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace61073295'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 11.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;RaghuKirans-MacBook-Pro.local&apos;, ip: &apos;10.10.5.169&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities [{unicodekeyboard=true, app=/Users/raghukiranmr/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, orientation=, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 5, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/raghukiranmr/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, orientation=, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef, deviceName=iPhone 5, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef}]
+Session ID: 53ba7192-19d1-454d-91da-7bd7df5bf2b6
+*** Element info: {Using=xpath, value=//UIAStaticText[@name=&apos;Enter 6-digit verification code&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:51)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:67)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:145)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElementByXPath(IOSDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:63)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at com.test.scripts.LoginToSulekha.test6DigitVerificationCode(LoginToSulekha.java:1133)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:282)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:83)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:114)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+</pre></div></td>
+<td>135</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testSkipLnk()'><b>testSkipLnk</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Tap over SKIP link and verify.<br/>
+<a href="#Output-989889899" onClick='toggleBox("Output-989889899", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-989889899" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-989889899">
+STEP226<br/>
+STEP227<br/>
+STEP228<br/>
+STEP229<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.15 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;RaghuKirans-MacBook-Pro.local&apos;, ip: &apos;10.10.5.169&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities [{unicodekeyboard=true, app=/Users/raghukiranmr/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, orientation=, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 5, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/raghukiranmr/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, orientation=, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef, deviceName=iPhone 5, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef}]
+Session ID: 2e1cb780-8889-42d8-9194-8a0c8c7510f4
+*** Element info: {Using=xpath, value=//UIAStaticText[@name=&apos;Popular Categories&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:51)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:67)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:145)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElementByXPath(IOSDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:63)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at com.test.scripts.LoginToSulekha.testSkipLnk(LoginToSulekha.java:1262)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace989889899", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace989889899'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.15 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;RaghuKirans-MacBook-Pro.local&apos;, ip: &apos;10.10.5.169&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_91&apos;
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities [{unicodekeyboard=true, app=/Users/raghukiranmr/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, orientation=, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 5, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/raghukiranmr/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, orientation=, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef, deviceName=iPhone 5, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=2dde13a2961f5f1c6f5a0f737daf13bcb43457ef}]
+Session ID: 2e1cb780-8889-42d8-9194-8a0c8c7510f4
+*** Element info: {Using=xpath, value=//UIAStaticText[@name=&apos;Popular Categories&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:51)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.execute(IOSDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:67)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:145)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElementByXPath(IOSDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:63)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.ios.IOSDriver.findElement(IOSDriver.java:1)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
+	at com.test.scripts.LoginToSulekha.testSkipLnk(LoginToSulekha.java:1262)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:282)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:83)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:114)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:286)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:240)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+</pre></div></td>
+<td>43</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testForgtPwd()'><b>testForgtPwd</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To tap over 'forgot password' link in Login page.<br/>
+<a href="#Output-1936502650" onClick='toggleBox("Output-1936502650", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1936502650" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1936502650">
+STEP133<br/>
+STEP134<br/>
+STEP135<br/>
+STEP136<br/>
+</div>
+</td>
+<td></td>
+<td>33</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testGoogleLogin()'><b>testGoogleLogin</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To login through google+<br/>
+<a href="#Output-801569151" onClick='toggleBox("Output-801569151", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-801569151" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-801569151">
+STEP147<br/>
+STEP148<br/>
+STEP149<br/>
+STEP150<br/>
+STEP151<br/>
+</div>
+</td>
+<td></td>
+<td>134</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testHidePwdLnk()'><b>testHidePwdLnk</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To tap over 'Hide' link of password field in login page<br/>
+<a href="#Output-2043106095" onClick='toggleBox("Output-2043106095", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2043106095" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2043106095">
+STEP113<br/>
+STEP114<br/>
+STEP115<br/>
+STEP116<br/>
+</div>
+</td>
+<td></td>
+<td>45</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testInvalidEnteringEmail()'><b>testInvalidEnteringEmail</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Enter invalid Email ID and tap over Create button.<br/>
+<a href="#Output-46941357" onClick='toggleBox("Output-46941357", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-46941357" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-46941357">
+STEP188<br/>
+STEP189<br/>
+STEP190<br/>
+STEP191<br/>
+STEP192<br/>
+STEP193<br/>
+</div>
+</td>
+<td></td>
+<td>115</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testInvalidMobileNumber()'><b>testInvalidMobileNumber</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Enter invalid Mobile number and tap over Create button.<br/>
+<a href="#Output-768216420" onClick='toggleBox("Output-768216420", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-768216420" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-768216420">
+STEP176<br/>
+STEP177<br/>
+STEP178<br/>
+STEP179<br/>
+STEP180<br/>
+STEP181<br/>
+</div>
+</td>
+<td></td>
+<td>108</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testInvalidOtp()'><b>testInvalidOtp</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Check entering invalid OTP<br/>
+<a href="#Output-69673470" onClick='toggleBox("Output-69673470", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-69673470" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-69673470">
+STEP200<br/>
+STEP201<br/>
+STEP202<br/>
+STEP203<br/>
+STEP204<br/>
+STEP205<br/>
+STEP206<br/>
+STEP207<br/>
+</div>
+</td>
+<td></td>
+<td>123</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testLoginInvalideEmail()'><b>testLoginInvalideEmail</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To tap over 'login' button by entering invalid emailid<br/>
+<a href="#Output-1320388319" onClick='toggleBox("Output-1320388319", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1320388319" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1320388319">
+STEP75<br/>
+STEP76<br/>
+STEP77<br/>
+STEP78<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testLoginInvalideMobNum()'><b>testLoginInvalideMobNum</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To tap over 'login' button by entering invalid mobileno.<br/>
+<a href="#Output-632071960" onClick='toggleBox("Output-632071960", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-632071960" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-632071960">
+STEP71<br/>
+STEP72<br/>
+STEP73<br/>
+STEP74<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testLoginUnRegEmail()'><b>testLoginUnRegEmail</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To tap over 'login' button by entering unregistered email id<br/>
+<a href="#Output-1771421544" onClick='toggleBox("Output-1771421544", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1771421544" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1771421544">
+STEP79<br/>
+STEP80<br/>
+STEP81<br/>
+STEP82<br/>
+</div>
+</td>
+<td></td>
+<td>44</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testLoginUnRegMob()'><b>testLoginUnRegMob</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To tap over 'login' button by entering unregistered mobile number<br/>
+<a href="#Output-894024873" onClick='toggleBox("Output-894024873", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-894024873" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-894024873">
+STEP83<br/>
+STEP84<br/>
+STEP85<br/>
+STEP86<br/>
+</div>
+</td>
+<td></td>
+<td>49</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testLoginWOEmailIDMobileNum()'><b>testLoginWOEmailIDMobileNum</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Tap over LOGIN button without entering any values in Email ID/Mobile number field and verify.<br/>
+<a href="#Output-877612522" onClick='toggleBox("Output-877612522", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-877612522" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-877612522">
+STEP67<br/>
+STEP68<br/>
+STEP69<br/>
+STEP70<br/>
+</div>
+</td>
+<td></td>
+<td>35</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testLoginWithEmailWithoutPwd()'><b>testLoginWithEmailWithoutPwd</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To tap over 'login' button by entering registered emailid and no password<br/>
+<a href="#Output-1104422581" onClick='toggleBox("Output-1104422581", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1104422581" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1104422581">
+STEP106<br/>
+STEP107<br/>
+STEP108<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testLoginWithMobileWithoutPwd()'><b>testLoginWithMobileWithoutPwd</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To tap over 'login' button by entering registered mobileno and no password<br/>
+<a href="#Output-443942537" onClick='toggleBox("Output-443942537", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-443942537" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-443942537">
+STEP103<br/>
+STEP104<br/>
+STEP105<br/>
+</div>
+</td>
+<td></td>
+<td>40</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testPwdViaEmail()'><b>testPwdViaEmail</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To enter a valid Email ID in Via email in Forgot password? Page and tap on Send button<br/>
+<a href="#Output-1912850431" onClick='toggleBox("Output-1912850431", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1912850431" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1912850431">
+STEP142<br/>
+STEP143<br/>
+STEP144<br/>
+STEP145<br/>
+STEP146<br/>
+</div>
+</td>
+<td></td>
+<td>62</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testPwdViaSms()'><b>testPwdViaSms</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To enter a valid mobile number in Via SMS in Forgot password? Page and tap on Send button<br/>
+<a href="#Output-1666544295" onClick='toggleBox("Output-1666544295", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1666544295" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1666544295">
+STEP137<br/>
+STEP138<br/>
+STEP139<br/>
+STEP140<br/>
+STEP141<br/>
+</div>
+</td>
+<td></td>
+<td>56</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testShowPwdLnk()'><b>testShowPwdLnk</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To tap over 'Show' link of password field in login page<br/>
+<a href="#Output-608519258" onClick='toggleBox("Output-608519258", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-608519258" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-608519258">
+STEP109<br/>
+STEP110<br/>
+STEP111<br/>
+STEP112<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testTandCApplyLnk()'><b>testTandCApplyLnk</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Tap over T&C apply link and verify.-- Bug T&C link is disabled.<br/>
+<a href="#Output-1495608502" onClick='toggleBox("Output-1495608502", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1495608502" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1495608502">
+STEP222<br/>
+STEP223<br/>
+STEP224<br/>
+STEP225<br/>
+</div>
+</td>
+<td></td>
+<td>34</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testUnRegEmailJoinSulekha()'><b>testUnRegEmailJoinSulekha</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Tap over Join Sulekha button displayed on the alert for unregistered emailID.<br/>
+<a href="#Output-1844334363" onClick='toggleBox("Output-1844334363", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1844334363" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1844334363">
+STEP91<br/>
+STEP92<br/>
+STEP93<br/>
+STEP94<br/>
+</div>
+</td>
+<td></td>
+<td>50</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testUnRegGoogleLogin()'><b>testUnRegGoogleLogin</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Check the Create Account page for unregistered user when logged in through Facebook or G+<br/>
+<a href="#Output-1558079303" onClick='toggleBox("Output-1558079303", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1558079303" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1558079303">
+STEP152<br/>
+STEP153<br/>
+STEP154<br/>
+STEP155<br/>
+STEP156<br/>
+STEP157<br/>
+STEP158<br/>
+STEP159<br/>
+STEP160<br/>
+STEP161<br/>
+</div>
+</td>
+<td></td>
+<td>82</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testUnRegMobJoinSulekha()'><b>testUnRegMobJoinSulekha</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Tap over Join Sulekha button displayed on the alert for unregistered mobile number.<br/>
+<a href="#Output-1792227359" onClick='toggleBox("Output-1792227359", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1792227359" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1792227359">
+STEP87<br/>
+STEP88<br/>
+STEP89<br/>
+STEP90<br/>
+</div>
+</td>
+<td></td>
+<td>51</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testUnRegMobileCancel()'><b>testUnRegMobileCancel</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Tap over Cancel button displayed on the alert for unregistered mobile number.<br/>
+<a href="#Output-1336777650" onClick='toggleBox("Output-1336777650", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1336777650" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1336777650">
+STEP95<br/>
+STEP96<br/>
+STEP97<br/>
+STEP98<br/>
+</div>
+</td>
+<td></td>
+<td>47</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testUnregisteredEmailPopupCancelBtn()'><b>testUnregisteredEmailPopupCancelBtn</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Tap over Cancel button displayed on the alert for unregistered EmailID.<br/>
+<a href="#Output-1233308726" onClick='toggleBox("Output-1233308726", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1233308726" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1233308726">
+STEP99<br/>
+STEP100<br/>
+STEP101<br/>
+STEP102<br/>
+</div>
+</td>
+<td></td>
+<td>48</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testValidEmailInvalidPwd()'><b>testValidEmailInvalidPwd</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To Tap over LOGIN and enter valid Email ID and invalid Password and verify.<br/>
+<a href="#Output-87060781" onClick='toggleBox("Output-87060781", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-87060781" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-87060781">
+STEP117<br/>
+STEP118<br/>
+STEP119<br/>
+STEP120<br/>
+</div>
+</td>
+<td></td>
+<td>52</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testValidLoginViaEmailID()'><b>testValidLoginViaEmailID</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To Tap over LOGIN and enter valid Email ID and valid Password and verify.<br/>
+<a href="#Output-686560878" onClick='toggleBox("Output-686560878", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-686560878" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-686560878">
+STEP125<br/>
+STEP126<br/>
+STEP127<br/>
+STEP128<br/>
+</div>
+</td>
+<td></td>
+<td>53</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testValidLoginViaValidMobileNum()'><b>testValidLoginViaValidMobileNum</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To Tap over LOGIN and enter valid Mobile number and valid Password and verify.<br/>
+<a href="#Output-1937380187" onClick='toggleBox("Output-1937380187", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1937380187" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1937380187">
+STEP129<br/>
+STEP130<br/>
+STEP131<br/>
+STEP132<br/>
+</div>
+</td>
+<td></td>
+<td>51</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testValidMobAndName()'><b>testValidMobAndName</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Enter a valid mobile number and email id in create account page and tap on Create button<br/>
+<a href="#Output-215078753" onClick='toggleBox("Output-215078753", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-215078753" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-215078753">
+STEP162<br/>
+STEP163<br/>
+STEP164<br/>
+STEP165<br/>
+STEP166<br/>
+STEP167<br/>
+STEP168<br/>
+STEP169<br/>
+</div>
+</td>
+<td></td>
+<td>109</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testValidMobileInvalidPwd()'><b>testValidMobileInvalidPwd</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: To Tap over LOGIN and enter valid Mobile number and invalid Password and verify.<br/>
+<a href="#Output-1988644427" onClick='toggleBox("Output-1988644427", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1988644427" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1988644427">
+STEP121<br/>
+STEP122<br/>
+STEP123<br/>
+STEP124<br/>
+</div>
+</td>
+<td></td>
+<td>49</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testValidOtp()'><b>testValidOtp</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Enter valid OTP<br/>
+<a href="#Output-12905860" onClick='toggleBox("Output-12905860", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-12905860" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-12905860">
+STEP214<br/>
+STEP215<br/>
+STEP216<br/>
+STEP217<br/>
+STEP218<br/>
+STEP219<br/>
+STEP220<br/>
+STEP221<br/>
+</div>
+</td>
+<td></td>
+<td>193</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testWOEnteringEmail()'><b>testWOEnteringEmail</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Tap over Create button without entering Email ID<br/>
+<a href="#Output-1615801298" onClick='toggleBox("Output-1615801298", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1615801298" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1615801298">
+STEP182<br/>
+STEP183<br/>
+STEP184<br/>
+STEP185<br/>
+STEP186<br/>
+STEP187<br/>
+</div>
+</td>
+<td></td>
+<td>112</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testWithoutEnteringMobileNumber()'><b>testWithoutEnteringMobileNumber</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Tap over Create button without entering Mobile number<br/>
+<a href="#Output-1615617512" onClick='toggleBox("Output-1615617512", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1615617512" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1615617512">
+STEP170<br/>
+STEP171<br/>
+STEP172<br/>
+STEP173<br/>
+STEP174<br/>
+STEP175<br/>
+</div>
+</td>
+<td></td>
+<td>97</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+<tr>
+<td title='com.test.scripts.LoginToSulekha.testWithoutName()'><b>testWithoutName</b><br>Test class: com.test.scripts.LoginToSulekha<br>Test method: Tap over Create button without entering Name.<br/>
+<a href="#Output-1860591867" onClick='toggleBox("Output-1860591867", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1860591867" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1860591867">
+STEP194<br/>
+STEP195<br/>
+STEP196<br/>
+STEP197<br/>
+STEP198<br/>
+STEP199<br/>
+</div>
+</td>
+<td></td>
+<td>85</td>
+<td>com.test.scripts.LoginToSulekha@34b7bfc0</td></tr>
+</table><p>
+</body>
+</html>

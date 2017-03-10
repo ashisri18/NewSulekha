@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.test.baselib.MyNXGTestListner"/>
+  </listeners>
+  <test name="More(failed)">
+    <classes>
+      <class name="com.test.scripts.More">
+        <methods>
+          <include name="setobjects"/>
+          <include name="AnyReview"/>
+          <include name="PostedReview"/>
+          <include name="MoreScreenAndShortlist"/>
+          <include name="setUp"/>
+          <include name="RemoveMyShortlist"/>
+          <include name="NotificationPage"/>
+          <include name="ListMyBuisnessPage"/>
+        </methods>
+      </class> <!-- com.test.scripts.More -->
+      <class name="com.test.scripts.MDLD">
+        <methods>
+          <include name="setobjects"/>
+          <include name="login"/>
+          <include name="setUp"/>
+          <include name="closeApp"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- com.test.scripts.MDLD -->
+      <class name="com.test.scripts.NeedPosting">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.NeedPosting -->
+      <class name="com.test.scripts.BusinessProfile">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.BusinessProfile -->
+      <class name="com.test.scripts.MyNeedsDashboard">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.MyNeedsDashboard -->
+    </classes>
+  </test> <!-- More(failed) -->
+  <test name="MDLD(failed)">
+    <classes>
+      <class name="com.test.scripts.More">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.More -->
+      <class name="com.test.scripts.MDLD">
+        <methods>
+          <include name="setobjects"/>
+          <include name="login"/>
+          <include name="setUp"/>
+          <include name="FormPage"/>
+          <include name="closeApp"/>
+          <include name="NextWOChangeValueSubmitBtn"/>
+          <include name="TellusMoreWithValue"/>
+          <include name="TellUsMoreWOValue"/>
+          <include name="MDLDNeed"/>
+          <include name="OthersOption"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- com.test.scripts.MDLD -->
+      <class name="com.test.scripts.NeedPosting">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.NeedPosting -->
+      <class name="com.test.scripts.BusinessProfile">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.BusinessProfile -->
+      <class name="com.test.scripts.MyNeedsDashboard">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.MyNeedsDashboard -->
+    </classes>
+  </test> <!-- MDLD(failed) -->
+  <test name="NeedPosting(failed)">
+    <classes>
+      <class name="com.test.scripts.More">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.More -->
+      <class name="com.test.scripts.MDLD">
+        <methods>
+          <include name="setobjects"/>
+          <include name="login"/>
+          <include name="setUp"/>
+          <include name="closeApp"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- com.test.scripts.MDLD -->
+      <class name="com.test.scripts.NeedPosting">
+        <methods>
+          <include name="setobjects"/>
+          <include name="SearchBoxPopularCategory"/>
+          <include name="BrowseBussinesslink"/>
+          <include name="NeedFormList"/>
+          <include name="setUp"/>
+          <include name="OthersOptionNextBtnwithoutvalue"/>
+          <include name="NeedFormLstWOOption"/>
+          <include name="BusinessLstWOOption"/>
+          <include name="NextWOChoosing"/>
+        </methods>
+      </class> <!-- com.test.scripts.NeedPosting -->
+      <class name="com.test.scripts.BusinessProfile">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.BusinessProfile -->
+      <class name="com.test.scripts.MyNeedsDashboard">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.MyNeedsDashboard -->
+    </classes>
+  </test> <!-- NeedPosting(failed) -->
+  <test name="MyNeedsDashboard(failed)">
+    <classes>
+      <class name="com.test.scripts.More">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.More -->
+      <class name="com.test.scripts.MDLD">
+        <methods>
+          <include name="setobjects"/>
+          <include name="login"/>
+          <include name="setUp"/>
+          <include name="closeApp"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- com.test.scripts.MDLD -->
+      <class name="com.test.scripts.NeedPosting">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.NeedPosting -->
+      <class name="com.test.scripts.BusinessProfile">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.BusinessProfile -->
+      <class name="com.test.scripts.MyNeedsDashboard">
+        <methods>
+          <include name="setobjects"/>
+          <include name="AutomaticRefeshDatePostDashboardpage"/>
+          <include name="CancelPopupVerifyCancelledShortlist"/>
+          <include name="SelectNotHappyQuoteComments"/>
+          <include name="NotFinalized"/>
+          <include name="DismissPopup"/>
+          <include name="CheckStatusNotificationTriggered"/>
+          <include name="setUp"/>
+          <include name="ResponsesPage"/>
+          <include name="WriteReviewLinkPostReview"/>
+        </methods>
+      </class> <!-- com.test.scripts.MyNeedsDashboard -->
+    </classes>
+  </test> <!-- MyNeedsDashboard(failed) -->
+  <test name="BusinessProfile(failed)">
+    <classes>
+      <class name="com.test.scripts.More">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.More -->
+      <class name="com.test.scripts.MDLD">
+        <methods>
+          <include name="setobjects"/>
+          <include name="login"/>
+          <include name="setUp"/>
+          <include name="closeApp"/>
+          <include name="launchApp"/>
+        </methods>
+      </class> <!-- com.test.scripts.MDLD -->
+      <class name="com.test.scripts.NeedPosting">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.NeedPosting -->
+      <class name="com.test.scripts.BusinessProfile">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+          <include name="SubmitReview"/>
+        </methods>
+      </class> <!-- com.test.scripts.BusinessProfile -->
+      <class name="com.test.scripts.MyNeedsDashboard">
+        <methods>
+          <include name="setobjects"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.test.scripts.MyNeedsDashboard -->
+    </classes>
+  </test> <!-- BusinessProfile(failed) -->
+</suite> <!-- Failed suite [Suite] -->

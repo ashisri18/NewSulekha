@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WelcomeTest"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="12.914">
+  <properties />
+  
+  
+            <testcase name="testWelcome" time="12.914" classname="com.houzify.scripts.WelcomeTest" />
+      
+</testsuite>

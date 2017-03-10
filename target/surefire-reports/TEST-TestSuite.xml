@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="453.172" tests="51" errors="0" skipped="48" failures="2">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.65-b01"/>
+    <property name="user.country.format" value="IN"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/automation/Documents/Sulekha/Sulekha"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/automation/Documents/Sulekha/Sulekha"/>
+    <property name="java.runtime.version" value="1.8.0_65-b17"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/nr/4s9jnrms603817704q17wqn40000gp/T/"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/Users/automation/Desktop/Sulekha/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf2552640226823701903.tmp"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/automation/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.11.4"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/automation"/>
+    <property name="user.timezone" value="Asia/Kolkata"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="automation"/>
+    <property name="java.class.path" value="/Users/automation/Downloads/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.m2e.maven.runtime_1.6.2.20150902-0001/jars/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_65"/>
+    <property name="java.ext.dirs" value="/Users/automation/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/Users/automation/Documents/Sulekha/Sulekha/EMBEDDED"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="testBusinessProfilePage" classname="com.test.scripts.BusinessProfile" time="330.593"/>
+  <testcase name="testCallIcon" classname="com.test.scripts.BusinessProfile" time="4.166">
+    <failure message="Error communicating with the remote browser. It may have died.&#10;Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;&#10;System info: host: &apos;Prasannas-MacBook-Pro.local&apos;, ip: &apos;10.10.4.140&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_65&apos;&#10;Driver info: driver.version: IOSDriver&#10;Capabilities [{unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 4s, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=bc7dfd69e9a704d0f8536bcd88204c345ced5f77, deviceName=iPhone 4s, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=bc7dfd69e9a704d0f8536bcd88204c345ced5f77}]&#10;Session ID: e1459993-c8ea-48e8-b419-67b84a569aa1" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: 
+Error communicating with the remote browser. It may have died.
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Prasannas-MacBook-Pro.local', ip: '10.10.4.140', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.4', java.version: '1.8.0_65'
+Driver info: driver.version: IOSDriver
+Capabilities [{unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 4s, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=bc7dfd69e9a704d0f8536bcd88204c345ced5f77, deviceName=iPhone 4s, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=bc7dfd69e9a704d0f8536bcd88204c345ced5f77}]
+Session ID: e1459993-c8ea-48e8-b419-67b84a569aa1
+	at com.test.scripts.BusinessProfile.testCallIcon(BusinessProfile.java:161)
+Caused by: org.openqa.selenium.WebDriverException: 
+org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Prasannas-MacBook-Pro.local', ip: '10.10.4.140', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.4', java.version: '1.8.0_65'
+Driver info: driver.version: IOSDriver
+	at com.test.scripts.BusinessProfile.testCallIcon(BusinessProfile.java:161)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+	at com.test.scripts.BusinessProfile.testCallIcon(BusinessProfile.java:161)
+Caused by: java.net.ConnectException: Connection refused
+	at com.test.scripts.BusinessProfile.testCallIcon(BusinessProfile.java:161)
+</failure>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="4.169">
+    <failure message="Error communicating with the remote browser. It may have died.&#10;Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;&#10;System info: host: &apos;Prasannas-MacBook-Pro.local&apos;, ip: &apos;10.10.4.140&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.8.0_65&apos;&#10;Driver info: driver.version: RemoteWebDriver&#10;Capabilities [{unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 4s, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=bc7dfd69e9a704d0f8536bcd88204c345ced5f77, deviceName=iPhone 4s, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=bc7dfd69e9a704d0f8536bcd88204c345ced5f77}]&#10;Session ID: e1459993-c8ea-48e8-b419-67b84a569aa1" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: 
+Error communicating with the remote browser. It may have died.
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Prasannas-MacBook-Pro.local', ip: '10.10.4.140', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.4', java.version: '1.8.0_65'
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 4s, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=bc7dfd69e9a704d0f8536bcd88204c345ced5f77, deviceName=iPhone 4s, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=bc7dfd69e9a704d0f8536bcd88204c345ced5f77}]
+Session ID: e1459993-c8ea-48e8-b419-67b84a569aa1
+Caused by: org.openqa.selenium.WebDriverException: 
+org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Prasannas-MacBook-Pro.local', ip: '10.10.4.140', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.4', java.version: '1.8.0_65'
+Driver info: driver.version: RemoteWebDriver
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+Caused by: java.net.ConnectException: Connection refused
+</failure>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testSMSTap" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testShortlistTap" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testRemoveShortlistTap" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testNotificationIcon" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testWorkPhoneNumber" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAddressTap" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testEmailIcon" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testWebIcon" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testServicesOffered" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testBusinessWebsiteLnk" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAnyReview" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testMoreReview" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testWriteReview" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testSubmitWORateReview" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testRateReview" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testSubmitReview" classname="com.test.scripts.BusinessProfile" time="0">
+    <skipped/>
+  </testcase>
+</testsuite>

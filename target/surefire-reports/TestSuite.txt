@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 51, Failures: 2, Errors: 0, Skipped: 48, Time elapsed: 453.172 sec <<< FAILURE! - in TestSuite
+testCallIcon(com.test.scripts.BusinessProfile)  Time elapsed: 4.166 sec  <<< FAILURE!
+org.openqa.selenium.remote.UnreachableBrowserException: 
+Error communicating with the remote browser. It may have died.
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Prasannas-MacBook-Pro.local', ip: '10.10.4.140', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.4', java.version: '1.8.0_65'
+Driver info: driver.version: IOSDriver
+Capabilities [{unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 4s, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=bc7dfd69e9a704d0f8536bcd88204c345ced5f77, deviceName=iPhone 4s, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=bc7dfd69e9a704d0f8536bcd88204c345ced5f77}]
+Session ID: e1459993-c8ea-48e8-b419-67b84a569aa1
+	at com.test.scripts.BusinessProfile.testCallIcon(BusinessProfile.java:161)
+Caused by: org.openqa.selenium.WebDriverException: 
+org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Prasannas-MacBook-Pro.local', ip: '10.10.4.140', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.4', java.version: '1.8.0_65'
+Driver info: driver.version: IOSDriver
+	at com.test.scripts.BusinessProfile.testCallIcon(BusinessProfile.java:161)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+	at com.test.scripts.BusinessProfile.testCallIcon(BusinessProfile.java:161)
+Caused by: java.net.ConnectException: Connection refused
+	at com.test.scripts.BusinessProfile.testCallIcon(BusinessProfile.java:161)
+
+tearDown(com.test.scripts.BusinessProfile)  Time elapsed: 4.169 sec  <<< FAILURE!
+org.openqa.selenium.remote.UnreachableBrowserException: 
+Error communicating with the remote browser. It may have died.
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Prasannas-MacBook-Pro.local', ip: '10.10.4.140', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.4', java.version: '1.8.0_65'
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, networkConnectionEnabled=false, bundleId=com.appid.sulekhauserapp, databaseEnabled=false, deviceName=iPhone 4s, fullReset=true, platform=MAC, showIOSLog=true, desired={unicodekeyboard=true, app=/Users/automation/Downloads/IndiaSulekha6.3.2.ipa, showIOSLog=true, platformVersion=9.3.2, automationName=Appium, bundleId=com.appid.sulekhauserapp, platformName=iOS, udid=bc7dfd69e9a704d0f8536bcd88204c345ced5f77, deviceName=iPhone 4s, fullReset=true}, platformVersion=9.3.2, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, browserName=, takesScreenshot=true, javascriptEnabled=true, platformName=iOS, udid=bc7dfd69e9a704d0f8536bcd88204c345ced5f77}]
+Session ID: e1459993-c8ea-48e8-b419-67b84a569aa1
+Caused by: org.openqa.selenium.WebDriverException: 
+org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'Prasannas-MacBook-Pro.local', ip: '10.10.4.140', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.4', java.version: '1.8.0_65'
+Driver info: driver.version: RemoteWebDriver
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 0.0.0.0:4723 [/0.0.0.0] failed: Connection refused
+Caused by: java.net.ConnectException: Connection refused
+
